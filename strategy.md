@@ -9,7 +9,7 @@ WIP - en var så 5 max pågående.
 - Vilka branches ska finnas?
   - main (publiceras, jobbas inte i)
   - dev (staging, kolla att allt funkar, merge till main)
-  - feature branches (per funktion/del, merge till dev)
+  - "feature branches" (döp till user storyn som du ska jobba med. En per funktion/del, merge till dev)
 - Hur ofta commit
   - så fort du kan beskriva kort vad du gjort.(t.ex. skapat en funktion, mindre tillägg i kod.)
 - När merge till main
@@ -25,7 +25,7 @@ WIP - en var så 5 max pågående.
 
 - 1-2 träffar per dag (discord)
 
-  - incheck 8.30 (standusp, vad gjorde jag igår vad gör jag idag.)
+  - incheck 8.30 (standups, vad gjorde jag igår, vad gör jag idag.)
   - avstämning 11.00 (möjlighet till code review)
   - utcheck 15.00 (möjlighet till code review)
 
