@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.locale-btn-group{
+    display: flex;
+    justify-content: space-evenly;
+}
+.locale-btn1{
+    background-image: url("../images/swe-flag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10em;
+    height: 5em;
+    border-radius: 8px;
+}
+.locale-btn2{
+    background-image: url("../images/eng-flag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10em;
+    height: 5em;
+    border-radius: 8px;
+}
