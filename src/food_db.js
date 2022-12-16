@@ -1,5 +1,49 @@
 const foodMenu = {
-  ribs: [
+  beverages: [
+    {
+      id: "papaya-king-tropical-drink",
+      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132258/papaya-king-tropical-drink.206f7c5b09ed7affb414f9bc7fe32447.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      name: "Papaya King",
+      dsc: "Papaya King - Tropical Drink",
+      price: 69,
+      rate: 4,
+      country: "New York, NY",
+      category: "Drink",
+    },
+    {
+      id: "woodford-reserve-mint-julep-syrup-2-pack",
+      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/133235/woodford-reserve-mint-julep-syrup-2-pack.0ac76063f151988113cbaabd0eaa829f.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      name: "Woodford Reserve",
+      dsc: "Woodford Reserve Mint Julep Syrup - 2 Pack",
+      price: 59,
+      rate: 5,
+      country: "Louisville, KY",
+      category: "Drink",
+    },
+    {
+      id: "unicorn-parade-milkshake-kit-for-8",
+      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132626/unicorn-parade-milkshake-kit-for-2.9052d04c1cf25b29442048bd3e535f21.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      name: "New Territories",
+      dsc: "Unicorn Parade Milkshake Kit for 8",
+      price: 109,
+      rate: 5,
+      country: "New York, NY",
+      category: "Drink",
+    },
+  ],
+  appetizers: [
+    {
+      id: "original-garlic-cream-cheese-bread-2-pack",
+      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/105205/original-garlic-cream-cheese-bread-2-pack.7cb55509860ca0311b97222aae4eb0b2.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      name: "Calic Bread",
+      dsc: "Original Garlic Cream Cheese Bread - 2 Pack",
+      price: 79,
+      rate: 5,
+      country: "Los Angeles, CA",
+      category: "Bread",
+    },
+  ],
+  mainCourses: [
     {
       id: "ribs-brisket-and-burnt-ends",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/79619/joes-kc-ribs-brisket-and-burnt-ends.6710e994980e485e6441b794717ad6fb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -8,6 +52,7 @@ const foodMenu = {
       price: 110.99,
       rate: 4,
       country: "Kansas City, KS",
+      category: "Ribs",
     },
     {
       id: "235203-blue-smoke-baby-back-ribs-backyard-barbecue-chicken-combo",
@@ -17,9 +62,28 @@ const foodMenu = {
       price: 129,
       rate: 4,
       country: "New York, NY",
+      category: "Ribs",
     },
-  ],
-  seafood: [
+    {
+      id: "california-reserve-ribeye-steak",
+      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132850/california-reserve-ribeye-steaks-gift-box.87b8f6acf5851abe58778d3017105edc.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      name: "Flannery Beef",
+      dsc: "California Reserve Ribeye Steak",
+      price: 99,
+      rate: 4,
+      country: "San Rafael, CA",
+      category: "Steak",
+    },
+    {
+      id: "dry-aged-usda-prime-black-angus-porterhouse-steak",
+      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/124865/usda-prime-black-angus-filet-mignon-barrel-cut.6ee213799e7d1848763d12edca18e3b1.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+      name: "Pat LaFrieda Meats",
+      dsc: "Dry-Aged USDA Prime Black Angus Porterhouse Steak",
+      price: 96.7,
+      rate: 4,
+      country: "North Bergen, NJ",
+      category: "Steak",
+    },
     {
       id: "legendary-seafood-gumbo",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/133100/legendary-seafood-gumbo.a4010efb8ba0569ff59d68c3723f0963.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -28,6 +92,7 @@ const foodMenu = {
       price: 89,
       rate: 4,
       country: "New Orleans, LA",
+      category: "Seafood",
     },
     {
       id: "commanders-palace-three-course-dinner-for-2-shrimp-and-grits",
@@ -37,6 +102,7 @@ const foodMenu = {
       price: 169,
       rate: 4,
       country: "New Orleans, LA",
+      category: "Seafood",
     },
     {
       id: "classic-clam-chowder-and-bread-bowls-4-pack",
@@ -46,20 +112,8 @@ const foodMenu = {
       price: 49,
       rate: 4,
       country: "San Francisco, CA",
+      category: "Seafood",
     },
-  ],
-  breads: [
-    {
-      id: "original-garlic-cream-cheese-bread-2-pack",
-      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/105205/original-garlic-cream-cheese-bread-2-pack.7cb55509860ca0311b97222aae4eb0b2.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
-      name: "Calic Bread",
-      dsc: "Original Garlic Cream Cheese Bread - 2 Pack",
-      price: 79,
-      rate: 5,
-      country: "Los Angeles, CA",
-    },
-  ],
-  burgers: [
     {
       id: "double-stack-burger",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/122768/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -68,6 +122,7 @@ const foodMenu = {
       price: 79,
       rate: 4,
       country: "Atlanta, GA",
+      category: "Burger",
     },
     {
       id: "burger-bomb",
@@ -77,6 +132,7 @@ const foodMenu = {
       price: 129,
       rate: 5,
       country: "New York, NY",
+      category: "Burger",
     },
     {
       id: "goldbelly-burger-blend-4-lbs",
@@ -86,6 +142,7 @@ const foodMenu = {
       price: 79,
       rate: 5,
       country: "San Rafael, CA",
+      category: "Burger",
     },
   ],
   desserts: [
@@ -97,6 +154,7 @@ const foodMenu = {
       price: 69,
       rate: 5,
       country: "Kimmswick, MO",
+      category: "Chocolate",
     },
     {
       id: "brooklyn-blackout-cookie-brownie-combo-pack-2-tins",
@@ -106,64 +164,16 @@ const foodMenu = {
       price: 89,
       rate: 5,
       country: "Brooklyn, NY",
-    },
-  ],
-  drinks: [
-    {
-      id: "papaya-king-tropical-drink",
-      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132258/papaya-king-tropical-drink.206f7c5b09ed7affb414f9bc7fe32447.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
-      name: "Papaya King",
-      dsc: "Papaya King - Tropical Drink",
-      price: 69,
-      rate: 4,
-      country: "New York, NY",
-    },
-    {
-      id: "woodford-reserve-mint-julep-syrup-2-pack",
-      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/133235/woodford-reserve-mint-julep-syrup-2-pack.0ac76063f151988113cbaabd0eaa829f.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
-      name: "Woodford Reserve",
-      dsc: "Woodford Reserve Mint Julep Syrup - 2 Pack",
-      price: 59,
-      rate: 5,
-      country: "Louisville, KY",
-    },
-  ],
-  steaks: [
-    {
-      id: "california-reserve-ribeye-steak",
-      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132850/california-reserve-ribeye-steaks-gift-box.87b8f6acf5851abe58778d3017105edc.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
-      name: "Flannery Beef",
-      dsc: "California Reserve Ribeye Steak",
-      price: 99,
-      rate: 4,
-      country: "San Rafael, CA",
-    },
-    {
-      id: "dry-aged-usda-prime-black-angus-porterhouse-steak",
-      img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/124865/usda-prime-black-angus-filet-mignon-barrel-cut.6ee213799e7d1848763d12edca18e3b1.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
-      name: "Pat LaFrieda Meats",
-      dsc: "Dry-Aged USDA Prime Black Angus Porterhouse Steak",
-      price: 96.7,
-      rate: 4,
-      country: "North Bergen, NJ",
-    },
-    {
-      "id": "unicorn-parade-milkshake-kit-for-8",
-      "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132626/unicorn-parade-milkshake-kit-for-2.9052d04c1cf25b29442048bd3e535f21.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
-      "name": "New Territories",
-      "dsc": "Unicorn Parade Milkshake Kit for 8",
-      "price": 109,
-      "rate": 5,
-      "country": "New York, NY"
+      category: "Chocolate",
     },
   ],
   pagination: {
-    "ribs:": 2,
-    seafoods: 3,
+    ribs: 2,
+    seafood: 3,
     breads: 1,
     burgers: 3,
-    desserts: 2,
-    drinks: 2,
-    steaks: 2,
+    chocolate: 2,
+    drink: 2,
+    steak: 2,
   },
 };
