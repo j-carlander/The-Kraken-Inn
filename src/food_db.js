@@ -149,7 +149,7 @@ const foodMenu = {
     },
   ],
   pagination: {
-    "ribs:": 2,
+    ribs: 2,
     seafoods: 3,
     breads: 1,
     burgers: 3,
