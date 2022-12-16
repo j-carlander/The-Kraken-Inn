@@ -1,27 +1,58 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.locale-btn-group{
-    display: flex;
-    justify-content: space-evenly;
+.locale-btn-group {
+  display: flex;
+  justify-content: space-evenly;
 }
-.locale-btn1{
-    background-image: url("../images/swe-flag.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10em;
-    height: 5em;
-    border-radius: 8px;
+.locale-btn1 {
+  background-image: url("../images/swe-flag.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10em;
+  height: 5em;
+  border-radius: 8px;
 }
-.locale-btn2{
-    background-image: url("../images/eng-flag.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10em;
-    height: 5em;
-    border-radius: 8px;
+.locale-btn2 {
+  background-image: url("../images/eng-flag.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10em;
+  height: 5em;
+  border-radius: 8px;
+}
+
+/* Product card */
+.product-card {
+  border: 1px solid red;
+  width: 310px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.product-info {
+  display: grid;
+  grid-template-areas: "title price" "desc price" "btn btn";
+}
+
+.product-title {
+  grid-area: title;
+  text-align: center;
+}
+
+.product-price {
+  grid-area: price;
+  place-self: center;
+}
+
+.add-to-cart {
+  grid-area: btn;
+  width: 60%;
+  place-self: center;
 }
