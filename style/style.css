@@ -25,3 +25,9 @@
     height: 5em;
     border-radius: 8px;
 }
+
+
+/* skapa mobilanpassad, lägg in måtten */
+@media only screen {
+    
+}
