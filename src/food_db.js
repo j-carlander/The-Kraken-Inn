@@ -1,5 +1,4 @@
-const foodMenu = {
-  beverages: [
+const foodItems = [
     {
       id: "papaya-king-tropical-drink",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132258/papaya-king-tropical-drink.206f7c5b09ed7affb414f9bc7fe32447.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -8,7 +7,7 @@ const foodMenu = {
       price: 69,
       rate: 4,
       country: "New York, NY",
-      category: "Drink",
+      type: "Beverages",
     },
     {
       id: "woodford-reserve-mint-julep-syrup-2-pack",
@@ -18,7 +17,7 @@ const foodMenu = {
       price: 59,
       rate: 5,
       country: "Louisville, KY",
-      category: "Drink",
+      type: "Beverages",
     },
     {
       id: "unicorn-parade-milkshake-kit-for-8",
@@ -28,10 +27,8 @@ const foodMenu = {
       price: 109,
       rate: 5,
       country: "New York, NY",
-      category: "Drink",
+      type: "Beverages",
     },
-  ],
-  appetizers: [
     {
       id: "original-garlic-cream-cheese-bread-2-pack",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/105205/original-garlic-cream-cheese-bread-2-pack.7cb55509860ca0311b97222aae4eb0b2.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -40,10 +37,8 @@ const foodMenu = {
       price: 79,
       rate: 5,
       country: "Los Angeles, CA",
-      category: "Bread",
+      type: "Appetizer",
     },
-  ],
-  mainCourses: [
     {
       id: "ribs-brisket-and-burnt-ends",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/79619/joes-kc-ribs-brisket-and-burnt-ends.6710e994980e485e6441b794717ad6fb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -52,7 +47,7 @@ const foodMenu = {
       price: 110.99,
       rate: 4,
       country: "Kansas City, KS",
-      category: "Ribs",
+      type: "Main course",
     },
     {
       id: "235203-blue-smoke-baby-back-ribs-backyard-barbecue-chicken-combo",
@@ -62,7 +57,7 @@ const foodMenu = {
       price: 129,
       rate: 4,
       country: "New York, NY",
-      category: "Ribs",
+      type: "Main course",
     },
     {
       id: "california-reserve-ribeye-steak",
@@ -72,7 +67,7 @@ const foodMenu = {
       price: 99,
       rate: 4,
       country: "San Rafael, CA",
-      category: "Steak",
+      type: "Main course",
     },
     {
       id: "dry-aged-usda-prime-black-angus-porterhouse-steak",
@@ -82,7 +77,7 @@ const foodMenu = {
       price: 96.7,
       rate: 4,
       country: "North Bergen, NJ",
-      category: "Steak",
+      type: "Main course",
     },
     {
       id: "legendary-seafood-gumbo",
@@ -92,7 +87,7 @@ const foodMenu = {
       price: 89,
       rate: 4,
       country: "New Orleans, LA",
-      category: "Seafood",
+      type: "Main course",
     },
     {
       id: "commanders-palace-three-course-dinner-for-2-shrimp-and-grits",
@@ -102,7 +97,7 @@ const foodMenu = {
       price: 169,
       rate: 4,
       country: "New Orleans, LA",
-      category: "Seafood",
+      type: "Main course",
     },
     {
       id: "classic-clam-chowder-and-bread-bowls-4-pack",
@@ -112,7 +107,7 @@ const foodMenu = {
       price: 49,
       rate: 4,
       country: "San Francisco, CA",
-      category: "Seafood",
+      type: "Main course",
     },
     {
       id: "double-stack-burger",
@@ -122,7 +117,7 @@ const foodMenu = {
       price: 79,
       rate: 4,
       country: "Atlanta, GA",
-      category: "Burger",
+      type: "Main course",
     },
     {
       id: "burger-bomb",
@@ -132,7 +127,7 @@ const foodMenu = {
       price: 129,
       rate: 5,
       country: "New York, NY",
-      category: "Burger",
+      type: "Main course",
     },
     {
       id: "goldbelly-burger-blend-4-lbs",
@@ -142,10 +137,8 @@ const foodMenu = {
       price: 79,
       rate: 5,
       country: "San Rafael, CA",
-      category: "Burger",
+      type: "Main course",
     },
-  ],
-  desserts: [
     {
       id: "chocolate-passion-layer-cake",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/97605/chocolate-passion-layer-cake.0562eb95df61a64486764db7f3ab4ddf.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -154,7 +147,7 @@ const foodMenu = {
       price: 69,
       rate: 5,
       country: "Kimmswick, MO",
-      category: "Chocolate",
+      type: "Desserts",
     },
     {
       id: "brooklyn-blackout-cookie-brownie-combo-pack-2-tins",
@@ -164,16 +157,16 @@ const foodMenu = {
       price: 89,
       rate: 5,
       country: "Brooklyn, NY",
-      category: "Chocolate",
+      type: "Desserts",
     },
-  ],
-  pagination: {
-    ribs: 2,
-    seafood: 3,
-    breads: 1,
-    burgers: 3,
-    chocolate: 2,
-    drink: 2,
-    steak: 2,
-  },
-};
+  ]
+//   pagination: {
+//     ribs: 2,
+//     seafood: 3,
+//     breads: 1,
+//     burgers: 3,
+//     Desserts: 2,
+//     drink: 2,
+//     steak: 2,
+//   },
+// };

@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/style.css" />
+    <!-- <link rel="stylesheet" href="/style/style.css" /> -->
+
     <script src="src/food_db.js" defer></script>
     <script src="src/product-card.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="src/app.js" defer></script>
 
     <title>Menu page</title>
   </head>
@@ -31,7 +32,7 @@
     <article>
       <section>
         <h3>Beverages</h3>
-        <div class="product-card">
+        <div id="beverages" class="product-card">
           <div class="img-container">
             <img
               class="product-img"
@@ -39,10 +40,14 @@
               alt="food" />
           </div>
           <div class="product-info">
-            <h4 class="product-title">Kalles Pizza</h4>
+            <h4 class="product-name">Kalles Pizza</h4>
             <p class="product-description">The worlds best Pizza</p>
             <p class="product-price">113</p>
-            <button class="add-to-cart">order</button>
+            <div class="add-to-cart-btns">
+              <button class="subtr-qty-btn">-</button>
+              <div class="product-qty-disp">0</div>
+              <button class="add-qty-btn">+</button>
+            </div>
           </div>
         </div>
       </section>
