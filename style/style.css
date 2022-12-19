@@ -8,7 +8,7 @@
     justify-content: space-evenly;
 }
 .locale-btn1{
-    background-image: url("../images/swe-flag.png");
+    background-image: url("../images/sv-flag.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
     border-radius: 8px;
 }
 .locale-btn2{
-    background-image: url("../images/eng-flag.png");
+    background-image: url("../images/gb-flag.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,6 +28,7 @@
 
 
 /* skapa mobilanpassad, lägg in måtten */
-@media only screen {
+/* (Jonathan): Utgår från "mobile first".*/
+/* @media only screen {
     
-}
+} */
