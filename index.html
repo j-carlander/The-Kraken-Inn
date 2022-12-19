@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap"
+      rel="stylesheet" />
+
     <link rel="stylesheet" href="style/style.css" />
 
     <script src="src/food_db.js" defer></script>
@@ -43,16 +49,19 @@
     </nav>
     <!-- lägga in logga  -->
     <!-- skapa klasser för de olika P -->
-    <section class="locale-section">
-      <h2 class="locale-heading">Choose your preferred language</h2>
-      <div class="locale-btn-group">
-        <div class="locale-btn1"></div>
-        <div class="locale-btn2"></div>
-      </div>
-    </section>
-    <p>
-      Order some grub or maybe some rum and three Sheets to the Wind ye will
-      become!
-    </p>
+    <div class="flex-container">
+      <section class="locale-section">
+        <h2 class="locale-heading">Choose your preferred language</h2>
+        <div class="locale-btn-group">
+          <a href="index-SVE.html" class="locale-btn1"></a>
+          <a href="#" class="locale-btn2"></a>
+        </div>
+      </section>
+      <p class="quote">
+        Order some grub or maybe some rum and three Sheets to the Wind ye will
+        become!
+      </p>
+      <a class="btn" href="menu-page.html">Welcome In</a>
+    </div>
   </body>
 </html>

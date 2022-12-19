@@ -59,7 +59,12 @@ function createCard(imgSrc, name, descr, price) {
 
   addToCartBtns.append(subtrQtyBtn, productQtyDisp, addQtyBtn);
 
-  productInfo.append(name, descr, price, addToCartBtns);
+  productInfo.append(
+    productName,
+    productDescription,
+    productPrice,
+    addToCartBtns
+  );
 
   productCard.append(imgContainer, productInfo);
 
