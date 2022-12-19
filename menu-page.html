@@ -16,27 +16,26 @@
     <title>Menu page</title>
   </head>
   <body>
-    <nav class="floating-navbar">
-      <ul class="nav-list">
-        <li class="nav-list-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="#">See Menu</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="checkout-page.html">Your Cart</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="#">About us</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <article>
+      <h2>Today's special</h2>
+      <div>
+        Beverages
 
-<!-- checkout-page/orderinformation -->
+        <button class="order-btn">Buy now</button>
+        <!--Samma class till alla beställningar, "order-btn"-->
+      </div>
+      <div>
+        Main course
+        <button class="order-btn">Buy now</button>
+      </div>
+      <div>
+        Dessert
+        <button class="order-btn">Buy now</button>
+      </div>
+      <!-- skapa class för button order meal of the day -->
+    </article>
+
+<!-- checkout page / orderinformation -->
 <div class = "page-container"> <!-- Klassen runt hela sidan -->
   <header class="order-page-header">Make sure ye ordered the right things,
       no backsies!</header> <!--Banner-->
@@ -107,46 +106,12 @@
   
       <button class="pay-btn">Pay with swish</button>
 
-<!-- special section -->
-    <article class="specials-section">
-      <h2 class="specials-heading">Today's special</h2>
-      <div>
+<!-- special section -->le>
+      <section>
+e        <h3>Beverages</h3>
+        <di
 
-
-        Beverages
-
-        <button class="order-btn">Buy now</button>
-        <!--Samma class till alla beställningar, "order-btn"-->
-      </div>
-      <div>
-        Main course
-        <button class="order-btn">Buy now</button>
-      </div>
-      <div>
-        Dessert
-        <button class="order-btn">Buy now</button>
-      </div>
-      <!-- skapa class för button order meal of the day -->
-    </article>
-
-    <article class="menu-section">
-      <!-- Navigering mellan kategorier i menyn -->
-      <nav class="menu-nav">
-        <ul class="menu-list">
-          <li class="menu-category" onclick="scrollToBeverage()">Beverages</li>
-          <li class="menu-category" onclick="scrollToAppetizers()">
-            Appetizers
-          </li>
-          <li class="menu-category" onclick="scrollToMainCourse()">
-            Main Courses
-          </li>
-          <li class="menu-category" onclick="scrollToDesserts()">Desserts</li>
-        </ul>
-      </nav>
-      <section class="beverage-section">
-        <h3>Beverages</h3>
-        <div class="menu-container" id="Beverages"></div>
-        <!-- <div class="product-card">
+v id="beverages" class="product-card">
           <div class="img-container">
             <img
               class="product-img"
@@ -163,22 +128,19 @@
               <button class="add-qty-btn">+</button>
             </div>
           </div>
-        </div> -->
+        </div>
       </section>
-
-      <section class="appetizer-section">
+      <section>
         <h3>Appetizers</h3>
-        <div class="menu-container" id="Appetizer"></div>
+        <div></div>
       </section>
-
-      <section class="main-course-section">
+      <section>
         <h3>Main Course</h3>
-        <div class="menu-container" id="mainCourse"></div>
+        <div></div>
       </section>
-
-      <section class="dessert-section">
+      <section>
         <h3>Dessert</h3>
-        <div class="menu-container" id="Desserts"></div>
+        <div></div>
       </section>
     </article>
   </body>
