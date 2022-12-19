@@ -38,10 +38,16 @@ function createCard(imgSrc, name, descr, price) {
 
   productPrice.innerText = price;
 
+  subtrQtyBtn.innerText = "-";
+
+  productQtyDisp.innerText = 0;
+
+  addQtyBtn.innerText = "+";
+
   // eventlisteners for buttons
 
   subtrQtyBtn.addEventListener("click", (e) => {
-    console.log(e.target.parentNode.nextElementSibling);
+    console.log(e.target.nextElementSibling);
   });
 
   addQtyBtn.addEventListener("click", (e) => {
@@ -57,29 +63,24 @@ function createCard(imgSrc, name, descr, price) {
 
   productCard.append(imgContainer, productInfo);
 
-
-  let beveragesDiv = document.getElementById('beverages');
-
-  beveragesDiv.append(productCard);
+  return productCard;
 }
-
-// test
-let subtrQtyBtn = document.querySelector(".subtr-qty-btn");
-subtrQtyBtn.addEventListener("click", (e) => {
-  console.log(e.target.nextElementSibling);
-});
-
-let addQtyBtn = document.querySelector(".add-qty-btn");
-addQtyBtn.addEventListener("click", (e) => {
-  console.log(e.target.previousElementSibling);
-});
-
 
 function renderCards() {
   for (const key in foodItems) {
-    createCard(foodItems[key].img, foodItems[key].name, foodItems[key].dsc, foodItems[key].price);
+    let container = document.getElementById(`${key}`);
+
+    for (const item in foodItems[key]) {
+      container.append(
+        createCard(
+          foodItems[key][item].img,
+          foodItems[key][item].name,
+          foodItems[key][item].dsc,
+          foodItems[key][item].price
+        )
+      );
+    }
   }
 }
-
 
 renderCards();
