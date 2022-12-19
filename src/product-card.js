@@ -38,10 +38,16 @@ function createCard(imgSrc, name, descr, price) {
 
   productPrice.innerText = price;
 
+  subtrQtyBtn.innerText = "-";
+
+  productQtyDisp.innerText = 0;
+
+  addQtyBtn.innerText = "+";
+
   // eventlisteners for buttons
 
   subtrQtyBtn.addEventListener("click", (e) => {
-    console.log(e.target.parentNode.nextElementSibling);
+    console.log(e.target.nextElementSibling);
   });
 
   addQtyBtn.addEventListener("click", (e) => {
@@ -57,8 +63,7 @@ function createCard(imgSrc, name, descr, price) {
 
   productCard.append(imgContainer, productInfo);
 
-
-  let beveragesDiv = document.getElementById('beverages');
+  let beveragesDiv = document.getElementById("beverages");
 
   beveragesDiv.append(productCard);
 }
@@ -74,12 +79,15 @@ addQtyBtn.addEventListener("click", (e) => {
   console.log(e.target.previousElementSibling);
 });
 
-
 function renderCards() {
   for (const key in foodItems) {
-    createCard(foodItems[key].img, foodItems[key].name, foodItems[key].dsc, foodItems[key].price);
+    createCard(
+      foodItems[key].img,
+      foodItems[key].name,
+      foodItems[key].dsc,
+      foodItems[key].price
+    );
   }
 }
-
 
 renderCards();
