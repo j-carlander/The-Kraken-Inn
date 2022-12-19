@@ -47,7 +47,6 @@ function allProducts(foodName, foodPrice, foodimgSrc){
     item.append(allProducts);*/
 }
 
-console.log(foodItems[1].name); // testar skriva ut en av produkternas namn 
 
 let removeCartProductBtn = document.getElementsByClassName("cart-delete-btn");
 console.log(removeCartProductBtn);
