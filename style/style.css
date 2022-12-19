@@ -77,18 +77,9 @@
   display: inline;
   padding: 0.5em;
 }
-.locale-btn2{
-    background-image: url("../images/eng-flag.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10em;
-    height: 5em;
-    border-radius: 8px;
-}
-
 
 /* skapa mobilanpassad, lägg in måtten */
-@media only screen {
+/* (Jonathan): Utgår från "mobile first".*/
+/* @media only screen {
     
-}
+} */

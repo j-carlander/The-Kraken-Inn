@@ -15,8 +15,27 @@
     <title>Menu page</title>
   </head>
   <body>
-    <article>
-      <h2>Today's special</h2>
+    <nav class="floating-navbar">
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#">See Menu</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="checkout-page.html">Your Cart</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#">About us</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <article class="spcials-section">
+      <h2 class="specials-heading">Today's special</h2>
       <div>
         Beverages
 
@@ -33,6 +52,7 @@
       </div>
       <!-- skapa class för button order meal of the day -->
     </article>
+<<<<<<< HEAD
     <article>
       <section>
         <h3>Beverages</h3>
@@ -53,19 +73,92 @@
               <button class="add-qty-btn">+</button>
             </div>
           </div>
+=======
+    <article class="menu-section">
+      <!-- Navigering mellan kategorier i menyn -->
+      <nav class="menu-nav">
+        <ul class="menu-list">
+          <li class="menu-category" onclick="scrollToBeverage()">Beverages</li>
+          <li class="menu-category" onclick="scrollToAppetizers()">
+            Appetizers
+          </li>
+          <li class="menu-category" onclick="scrollToMainCourse()">
+            Main Courses
+          </li>
+          <li class="menu-category" onclick="scrollToDesserts()">Desserts</li>
+        </ul>
+      </nav>
+      <section class="beverage-section">
+        <h3>Beverages</h3>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+>>>>>>> origin/dev
         </div>
       </section>
-      <section>
+
+      <section class="appetizer-section">
         <h3>Appetizers</h3>
-        <div></div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
       </section>
-      <section>
+
+      <section class="main-course-section">
         <h3>Main Course</h3>
-        <div></div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
       </section>
-      <section>
+
+      <section class="dessert-section">
         <h3>Dessert</h3>
-        <div></div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
+        <div class="menu-item">
+          <h4 class="menu-item-heading">Filler Item</h4>
+          <p class="menu-item-text">Filler text</p>
+        </div>
       </section>
     </article>
   </body>
