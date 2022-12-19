@@ -1,4 +1,5 @@
-const foodItems = [
+const foodItems = {
+  Beverages: [
     {
       id: "papaya-king-tropical-drink",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132258/papaya-king-tropical-drink.206f7c5b09ed7affb414f9bc7fe32447.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -29,6 +30,9 @@ const foodItems = [
       country: "New York, NY",
       type: "Beverages",
     },
+  ],
+
+  Appetizer: [
     {
       id: "original-garlic-cream-cheese-bread-2-pack",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/105205/original-garlic-cream-cheese-bread-2-pack.7cb55509860ca0311b97222aae4eb0b2.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -39,6 +43,8 @@ const foodItems = [
       country: "Los Angeles, CA",
       type: "Appetizer",
     },
+  ],
+  mainCourse: [
     {
       id: "ribs-brisket-and-burnt-ends",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/79619/joes-kc-ribs-brisket-and-burnt-ends.6710e994980e485e6441b794717ad6fb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -139,6 +145,9 @@ const foodItems = [
       country: "San Rafael, CA",
       type: "Main course",
     },
+  ],
+
+  Desserts: [
     {
       id: "chocolate-passion-layer-cake",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/97605/chocolate-passion-layer-cake.0562eb95df61a64486764db7f3ab4ddf.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
@@ -159,7 +168,8 @@ const foodItems = [
       country: "Brooklyn, NY",
       type: "Desserts",
     },
-  ]
+  ],
+};
 //   pagination: {
 //     ribs: 2,
 //     seafood: 3,

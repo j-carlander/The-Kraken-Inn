@@ -52,6 +52,9 @@
   grid-area: title;
   text-align: center;
 }
+.product-description {
+  grid-area: desc;
+}
 
 .product-price {
   grid-area: price;
