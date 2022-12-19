@@ -4,33 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="/style/style.css" /> -->
+
     <script src="src/food_db.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="src/product-card.js" defer></script>
+    <script src="src/app.js" defer></script>
+
+    <link rel="stylesheet" href="style/style.css" />
 
     <title>Menu page</title>
   </head>
   <body>
     <article>
       <h2>Today's special</h2>
-      <div>Beverages
+      <div>
+        Beverages
 
-        <button class = "order-btn">Buy now</button> <!--Samma class till alla beställningar, "order-btn"-->
+        <button class="order-btn">Buy now</button>
+        <!--Samma class till alla beställningar, "order-btn"-->
       </div>
-      <div>Main course
-        <button class = "order-btn">Buy now</button>
+      <div>
+        Main course
+        <button class="order-btn">Buy now</button>
       </div>
-      <div>Dessert
-        <button class = "order-btn">Buy now</button>
+      <div>
+        Dessert
+        <button class="order-btn">Buy now</button>
       </div>
       <!-- skapa class för button order meal of the day -->
-      
     </article>
     <article>
-     
       <section>
         <h3>Beverages</h3>
-        <div></div>
+        <div id="beverages" class="product-card">
+          <div class="img-container">
+            <img
+              class="product-img"
+              src="https://picsum.photos/90/90"
+              alt="food" />
+          </div>
+          <div class="product-info">
+            <h4 class="product-name">Kalles Pizza</h4>
+            <p class="product-description">The worlds best Pizza</p>
+            <p class="product-price">113</p>
+            <div class="add-to-cart-btns">
+              <button class="subtr-qty-btn">-</button>
+              <div class="product-qty-disp">0</div>
+              <button class="add-qty-btn">+</button>
+            </div>
+          </div>
+        </div>
       </section>
       <section>
         <h3>Appetizers</h3>
