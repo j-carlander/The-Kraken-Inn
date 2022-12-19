@@ -14,38 +14,34 @@
     <title>order page</title>
 </head>
 <body>
+    <div class = "page-container"> <!-- Klassen runt hela sidan -->
 <header class="order-page-header">Make sure ye ordered the right things,
     no backsies!</header> <!--Banner-->
     
-<div class ="shopping-cart">     <!-- Klassen runt hela sidan -->
+<div class ="shopping-cart">     <!-- Klassen runt hela shoppingcart -->
     <div class = "title-shoppingcart">
       Products in your shoppingcart:
     </div>
 <br>
     <ul>
         <li>
-            <article class ="product">
-                <button class = "delete-btn"> X </button>
-                <span class = "article"> Cola</span>
-                <button class = "minus-btn"> - </button>
+            <article class ="cart-product">      <!-- Productkorten-->
+                <button class = "cart-delete-btn"> X </button>
+                <span class = "cart-pruduct"> Cola</span>
+                <button class = "cart-minus-btn"> - </button>
                 <span article-quantity>"5"</span>
-                <button class = "plus-btn"> + </button>
-                <span>Price: </span>
+                <button class = "cart-plus-btn"> + </button>
+                <span class="cart-product-price">Price: </span>
              </article>
-
- 
         </li>
     </ul>
 <br>
-   <div class = "product">     <!-- Klassen runt alla tillagda Products-->
-        <div class = "button">
-        <span class = "delete-btn"></span>
+
+
+    <div class="cart-total">
+        <p class = "total-price-title">Total </p>
+        <span class="total-price">€ 14,9</span>
     </div>
-</div> 
-    <div class="place-order-info">
-        <div class="total-price-info">
-            Total price: _________
-        </div>
         <br>
         <label for ="tablenumber">Avast ye hearties! Which table arr ye at?</label>
         <input type="number" placeholder="Ex: 2,4,5">
@@ -55,7 +51,7 @@
     <button class = "order-more-btn">Order More?</button> 
 
     <button class = "pay-btn">Pay with swish</button> 
-  
+</div>
 
 </div>
 </body>
