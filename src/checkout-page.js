@@ -32,6 +32,7 @@ console.log(e.target.previousElementSibling);
     let productQtyDis = e.target.previousElementSibling;
     let productQty = e.target.previousElementSibling.innerText;
 
+
     productQty = Number(productQty);
     productQty++
     productQtyDis.innerText = productQty;
@@ -48,25 +49,18 @@ console.log(e.target.previousElementSibling);
         quantity: productQty,
         price: articleTotal
     }
-
-
     shoppingList.push(article);
+    
+        if (article) {
+            let menu = document.querySelectorAll(".cart-menu")
 
+        }
+        return (article)
+        
+    
+       
 }
-    
-
-// for (let index = 0; index < productQty.length; index++) {
-//     const element = productQty[index];
-    
-// }
-
-// }
-//SKA DETTA VARA MED?? TIPS FRÅN YOUTUBE
-// if (document.readyState == "loading") { //om sidan laddar kör den
-//     document.addEventListener("DOMContentLoaded", ready)
-// } else { //om den inte laddar eller redan laddat
-//     ready()
-// }
+ 
 
 //ska läggas till på varje produkt i vår lista
 let removeCartProductBtn = document.getElementsByClassName("cart-delete-btn");
@@ -90,7 +84,7 @@ function updateCartTotal() { //funktionen går igenom varukorgens alla artiklar 
         let priceElement = titleShoppingcart.getElementsByClassName("cart-product-price")[0];
         let quantityElement = titleShoppingcart.getElementsByClassName("cart-quantity")[0];
         
-        let price = parseFloat(priceElement.innerText.replace('€', '')) //parseFloat, för decimaler
+        let price = parseFloat(priceElement.innerText.replace('€', '')) //parseFloat, converts all strings till tal med decimaler
         let quantity = quantityElement.value //fungerar bara med input-funktionen!
         totalPrice = tital + (price * quantity) //för att se!        
     }

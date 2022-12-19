@@ -9,7 +9,7 @@
     <script src="src/food_db.js" defer></script>
     <script src="src/product-card.js" defer></script>
     <script src="src/app.js" defer></script>
-    <script src="src/checkout-page.js" defer></script>
+    <script src="src/checkout-page.js" defer></script> 
 
     <link rel="stylesheet" href="style/style.css" />
 
@@ -50,7 +50,8 @@
           <li>
               <article class ="cart-product">      <!-- Productkorten-->
                   <span class ="article-quantity"> <!--parent över buttons och antal buttons-->
-                      <button class = "cart-minus-btn"> - </button>
+                    <span class="cart-menu">Produkten ska hit,cart-menu</span>  
+                    <button class = "cart-minus-btn"> - </button>
                       <button class = "cart-plus-btn"> + </button>
                        <label for ="cart-quantity"></label> <!--Något vi vill ha? -->
                       <input type="number" placeholder="Ex: 2">
@@ -73,9 +74,7 @@
           <input type="number" placeholder="Ex: 2,4,5">
   </div>
       <button class = "order-now-btn">Place order!</button> 
-      <br>
       <button class = "order-more-btn">Order More?</button> 
-  
       <button class = "pay-btn">Pay with swish</button> 
   </div>
   
