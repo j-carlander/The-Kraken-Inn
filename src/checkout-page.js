@@ -57,5 +57,4 @@ for (let index = 0; index < removeCartProductBtn.length; index++) {
         let clickedRemoveBtn = event.target      // ta bort cart från inköpslistan
         clickedRemoveBtn.parentElement.parentElement.remove();
     })
-
 }
