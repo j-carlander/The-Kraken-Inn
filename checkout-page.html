@@ -8,30 +8,34 @@
     <link rel="stylesheet" href="style/style.css" />
     <script src="src/food_db.js" defer></script>
     <script src="src/app.js" defer></script>
+    <script src="src/checkout-page.js" defer></script>
 
     <!-- komma ihåg att länka från menu-page! -->
 
     <title>order page</title>
 </head>
 <body>
-    <div class = "page-container"> <!-- Klassen runt hela sidan -->
+<div class = "page-container"> <!-- Klassen runt hela sidan -->
 <header class="order-page-header">Make sure ye ordered the right things,
     no backsies!</header> <!--Banner-->
     
 <div class ="shopping-cart">     <!-- Klassen runt hela shoppingcart -->
     <div class = "title-shoppingcart">
       Products in your shoppingcart:
+      <p>Article</p><p>Quantity</p><p>Price:</p>  <!--rubriker-->
     </div>
 <br>
     <ul>
         <li>
             <article class ="cart-product">      <!-- Productkorten-->
-                <button class = "cart-delete-btn"> Remove </button>
-                <span class = "cart-pruduct"> Cola</span>
-                <button class = "cart-minus-btn"> - </button>
-                <span article-quantity> 5 </span>
-                <button class = "cart-plus-btn"> + </button>
-                <span class="cart-product-price">Price: </span>
+                <span class ="article-quantity"> <!--parent över buttons och antal buttons-->
+                    <button class = "cart-minus-btn"> - </button>
+                    <button class = "cart-plus-btn"> + </button>
+                    <button class = "cart-delete-btn"> Remove </button>
+                    <span class="cart-product-price">€: </span>
+                    
+                </span>
+                
              </article>
         </li>
     </ul>
@@ -39,12 +43,12 @@
 
     <div class="cart-total">
         <p class = "total-price-title">Total </p>
-        <span class="total-price">€ 14,9</span>
+        <span class="total-price">€ </span>
     </div>
         <br>
         <label for ="tablenumber">Avast ye hearties! Which table arr ye at?</label>
         <input type="number" placeholder="Ex: 2,4,5">
-    </div>
+</div>
     <button class = "order-now-btn">Place order!</button> 
     <br>
     <button class = "order-more-btn">Order More?</button> 
@@ -52,5 +56,5 @@
     <button class = "pay-btn">Pay with swish</button> 
 </div>
 
-</div>
+ </div> <!--page-container -->
 </body>
