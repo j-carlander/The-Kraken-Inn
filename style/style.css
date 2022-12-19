@@ -1,31 +1,85 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.locale-btn-group{
-    display: flex;
-    justify-content: space-evenly;
+.locale-btn-group {
+  display: flex;
+  justify-content: space-evenly;
 }
-.locale-btn1{
-    background-image: url("../images/sv-flag.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10em;
-    height: 5em;
-    border-radius: 8px;
+.locale-btn1 {
+  background-image: url("../images/swe-flag.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10em;
+  height: 5em;
+  border-radius: 8px;
 }
-.locale-btn2{
-    background-image: url("../images/gb-flag.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10em;
-    height: 5em;
-    border-radius: 8px;
+.locale-btn2 {
+  background-image: url("../images/eng-flag.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10em;
+  height: 5em;
+  border-radius: 8px;
 }
 
+/* Product card */
+.product-card {
+  border: 1px solid red;
+  width: 310px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.img-container {
+  width: 90px;
+  height: 90px;
+}
+.product-img {
+  width: 100%;
+}
+.product-info {
+  display: grid;
+  grid-template-areas: "title price" "desc price" "btns btns";
+}
+
+.product-title {
+  grid-area: title;
+  text-align: center;
+}
+.product-description {
+  grid-area: desc;
+}
+
+.product-price {
+  grid-area: price;
+  place-self: center;
+}
+
+.add-to-cart-btns {
+  grid-area: btns;
+  place-self: center;
+  /* width: 100%; */
+}
+
+/* .add-to-cart-btns form {
+ 
+  place-self: center; 
+   display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+}*/
+.subtr-qty-btn,
+.add-qty-btn,
+.product-qty-disp {
+  width: 2em;
+  display: inline;
+  padding: 0.5em;
+}
 
 /* skapa mobilanpassad, lägg in måtten */
 /* (Jonathan): Utgår från "mobile first".*/
