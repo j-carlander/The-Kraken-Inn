@@ -89,15 +89,23 @@
 
 /* Product card */
 .product-card {
-  border: 1px solid red;
   width: 310px;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  background-color: #b88e57;
+  margin-top: .5em;
+  padding: .3em;
+  height: 9em;
+
 }
 
 .img-container {
   width: 90px;
   height: 90px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .product-img {
   width: 100%;
@@ -152,3 +160,24 @@
 /* @media only screen {
     
 } */
+/* --------------- Menu page / checkout ------------- */
+
+body, html {
+  font-family: "Love Ya Like A Sister", cursive;
+  background-image: url(/images/pirateShip.png);
+}
+.background{
+  padding: .5em;
+}
+
+li{
+  list-style-type: none;
+}
+.menu-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-section{
+  text-align: center;
+}
