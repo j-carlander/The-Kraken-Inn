@@ -102,10 +102,6 @@
 .img-container {
   width: 90px;
   height: 90px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .product-img {
   width: 100%;

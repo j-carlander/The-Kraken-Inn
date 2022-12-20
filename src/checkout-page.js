@@ -40,7 +40,7 @@ function removeFromShoppingList(article, index) {
     return;
   }
   if (article.quantity == 0) {
-    console.log(`index: ${index}`);
+    // console.log(`index: ${index}`);
     shoppingList.splice(index, 1);
   } else {
     shoppingList[index].quantity = article.quantity;
@@ -120,6 +120,11 @@ function subtrFromCart(e) {
 //     ready()
 // }
 
+document.getElementById("open-cart").addEventListener("click", function () {
+  document.getElementById("cart").classList.toggle("hide");
+  // listProductsInCart();
+});
+
 //ska läggas till på varje produkt i vår lista
 let removeCartProductBtn = document.getElementsByClassName("cart-delete-btn");
 console.log(removeCartProductBtn);
@@ -151,5 +156,5 @@ function updateCartTotal() {
     let quantity = quantityElement.value; //fungerar bara med input-funktionen!
     totalPrice = tital + price * quantity; //för att se!
   }
-  document.getElementsByClassName("total-price")[0].innerText = "€" + total; //
+  document.getElementsByClassName("total-price")[0].innerText = total; //
 }
