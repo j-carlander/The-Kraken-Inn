@@ -3,6 +3,7 @@
 
 let shoppingList = [] 
 
+
 // checkout-page
 let shoppingCart = document.querySelector(".shopping-cart");
 // let addToCheckoutBtn = document.querySelector(".add-qty-btn");
@@ -52,13 +53,9 @@ console.log(e.target.previousElementSibling);
     shoppingList.push(article);
     
         if (article) {
-            let menu = document.querySelectorAll(".cart-menu")
-
+            let cart = document.querySelectorAll(".cart-product")
         }
-        return (article)
-        
-    
-       
+        return (article)       
 }
  
 
