@@ -128,6 +128,7 @@
 }
 
 .add-to-cart-btns {
+  display: inline-block;
   grid-area: btns;
   place-self: center;
   /* width: 100%; */
@@ -141,7 +142,8 @@
 }*/
 .subtr-qty-btn,
 .add-qty-btn,
-.product-qty-disp {
+.product-qty-disp,
+.cart-delete-btn {
   width: 2em;
   display: inline;
   padding: 0.5em;
@@ -152,3 +154,14 @@
 /* @media only screen {
     
 } */
+
+/* shopping cart */
+
+.cart-product-price::before {
+  content: "€ ";
+}
+
+.shopping-cart-icon {
+  text-align: end;
+  font-size: 2rem;
+}

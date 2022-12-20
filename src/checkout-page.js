@@ -40,7 +40,7 @@ function removeFromShoppingList(article, index) {
     return;
   }
   if (article.quantity == 0) {
-    console.log(`index: ${index}`);
+    // console.log(`index: ${index}`);
     shoppingList.splice(index, 1);
   } else {
     shoppingList[index].quantity = article.quantity;
@@ -151,5 +151,5 @@ function updateCartTotal() {
     let quantity = quantityElement.value; //fungerar bara med input-funktionen!
     totalPrice = tital + price * quantity; //för att se!
   }
-  document.getElementsByClassName("total-price")[0].innerText = "€" + total; //
+  document.getElementsByClassName("total-price")[0].innerText = total; //
 }
