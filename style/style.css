@@ -5,12 +5,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.main-heading {
+  font-family: "Love Ya Like A Sister", cursive;
+  padding: 1em 2em;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.main-heading-span {
+  font-size: 1.75rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2em auto;
+}
+
+.nav-list-item {
+  list-style: none;
+}
+
+.nav-list-item a {
+  text-decoration: none;
+  font-size: 1;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Love Ya Like A Sister", cursive;
+}
+
 .locale-btn-group {
   display: flex;
   justify-content: space-evenly;
+  gap: 1em;
+  margin: 2em auto;
 }
 .locale-btn1 {
-  background-image: url("../images/swe-flag.png");
+  background-image: url("../images/sv-flag.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,13 +55,36 @@
   border-radius: 8px;
 }
 .locale-btn2 {
-  background-image: url("../images/eng-flag.png");
+  background-image: url("../images/gb-flag.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 10em;
   height: 5em;
   border-radius: 8px;
+}
+
+.quote {
+  margin: 2em auto;
+}
+
+.btn {
+  width: 60%;
+  padding: 1em 1em;
+  border: 5px outset #b88e57;
+  background-color: #d5b78b;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 1.5em;
+}
+.btn:hover {
+  background-color: #f8d5a1;
+}
+.btn:active {
+  border: 5px inset #b88e57;
+  background-color: #d5b78b;
 }
 
 /* Product card */
@@ -45,7 +104,11 @@
 }
 .product-info {
   display: grid;
-  grid-template-areas: "title price" "desc price" "btns btns";
+  grid-template-areas:
+    "title price"
+    "desc price"
+    "btns btns";
+  grid-template-columns: 150px 55px;
 }
 
 .product-title {
@@ -59,6 +122,9 @@
 .product-price {
   grid-area: price;
   place-self: center;
+}
+.product-price::before {
+  content: "€ ";
 }
 
 .add-to-cart-btns {

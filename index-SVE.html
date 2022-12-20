@@ -1,17 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap"
+      rel="stylesheet" />
 
     <link rel="stylesheet" href="style/style.css" />
+
     <script src="src/food_db.js" defer></script>
     <script src="src/app.js" defer></script>
     <script src="src/checkout-page.js" defer></script>
 
     <title>The Kraken Inn</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Välkomstsidan -->
+    <header class="main-header">
+      <img src="images/main-banner.png" alt="" />
+      <h1 class="main-heading">
+        Ohoj skojare,
+        <span class="main-heading-span">välkommen till </span>
+        The Kraken Inn!
+      </h1>
+    </header>
+    <nav class="floating-navbar">
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a href="#">Hem</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="menu-page.html">Se Menyn</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="checkout-page.html">Din kundkorg</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#">Om oss</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- lägga in logga  -->
+    <!-- skapa klasser för de olika P -->
+    <div class="flex-container">
+      <section class="locale-section">
+        <h2 class="locale-heading">Välj önskat språk</h2>
+        <div class="locale-btn-group">
+          <a href="#" class="locale-btn1"></a>
+          <a href="index.html" class="locale-btn2"></a>
+        </div>
+      </section>
+      <p class="quote">
+        Beställ lite käk eller kanske lite rom och tre Tampar i Vinden kommer ni
+        bli
+      </p>
+      <a class="btn" href="menu-page.html">Välkommen In</a>
+    </div>
+  </body>
+</html>
