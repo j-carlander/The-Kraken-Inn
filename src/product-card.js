@@ -48,7 +48,7 @@ function createCard(imgSrc, name, descr, price) {
 
   subtrQtyBtn.addEventListener("click", (e) => {
     console.log(e.target.nextElementSibling);
-    // subtrFromCart(e);
+    subtrFromCart(e);
   });
 
   addQtyBtn.addEventListener("click", (e) => {

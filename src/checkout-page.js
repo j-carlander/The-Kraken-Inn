@@ -35,11 +35,24 @@ function pushToShoppingList(article, index) {
   }
 }
 
+function removeFromShoppingList(article, index) {
+  if (index == -1) {
+    return;
+  }
+  if (article.quantity == 0) {
+    console.log(`index: ${index}`);
+    shoppingList.splice(index, 1);
+  } else {
+    shoppingList[index].quantity = article.quantity;
+    shoppingList[index].price = article.price;
+  }
+}
+
 function createCartArticleObject(e, productQty) {
   let productInfo = e.target.parentNode.parentNode;
   let productTitle = productInfo.querySelector(".product-title").innerText;
   let productPrice = productInfo.querySelector(".product-price").innerText;
-  let articleTotal = productQty * productPrice;
+  let articleTotal = (productQty * productPrice).toFixed(2);
 
   let article = {
     title: productTitle,
@@ -61,12 +74,14 @@ function incrementProductQty(e) {
 }
 
 function decrementProductQty(e) {
-  let productQtyDis = e.target.previousElementSibling;
-  let productQty = e.target.previousElementSibling.innerText;
+  let productQtyDis = e.target.nextElementSibling;
+  let productQty = e.target.nextElementSibling.innerText;
 
   productQty = Number(productQty);
-  productQty--;
-  productQtyDis.innerText = productQty;
+  if (productQty > 0) {
+    productQty--;
+    productQtyDis.innerText = productQty;
+  }
 
   return productQty;
 }
@@ -83,6 +98,15 @@ function addToCart(e) {
   //   console.log(`shoppinglist: ${shoppingList}`);
 }
 
+function subtrFromCart(e) {
+  let productQty = decrementProductQty(e);
+
+  let article = createCartArticleObject(e, productQty);
+
+  let foundIndex = findIndexOf(article);
+
+  removeFromShoppingList(article, foundIndex);
+}
 // for (let index = 0; index < productQty.length; index++) {
 //     const element = productQty[index];
 
