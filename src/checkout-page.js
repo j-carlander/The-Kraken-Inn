@@ -123,7 +123,7 @@ function updateCartTotal() {
     let quantityElement =
       titleShoppingcart.getElementsByClassName("cart-quantity")[0];
 
-    let price = parseFloat(priceElement.innerText.replace("€", "")); //parseFloat, för decimaler
+    let price = parseFloat(priceElement.innerText.replace("€", "")); //parseFloat, converts all strings till tal med decimaler
     let quantity = quantityElement.value; //fungerar bara med input-funktionen!
     totalPrice = tital + price * quantity; //för att se!
   }
