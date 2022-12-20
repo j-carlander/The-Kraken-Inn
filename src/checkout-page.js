@@ -120,6 +120,11 @@ function subtrFromCart(e) {
 //     ready()
 // }
 
+document.getElementById("open-cart").addEventListener("click", function () {
+  document.getElementById("cart").classList.toggle("hide");
+  // listProductsInCart();
+});
+
 //ska läggas till på varje produkt i vår lista
 let removeCartProductBtn = document.getElementsByClassName("cart-delete-btn");
 console.log(removeCartProductBtn);

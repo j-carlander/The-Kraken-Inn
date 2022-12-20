@@ -40,9 +40,9 @@
       </div>
       <!-- skapa class för button order meal of the day -->
     </article>
-    <p class="shopping-cart-icon">&#128722;</p>
+    <p class="shopping-cart-icon" id="open-cart">&#128722;</p>
     <!-- checkout page / orderinformation -->
-    <div class="page-container">
+    <div class="page-container hide" id="cart">
       <!-- Klassen runt hela sidan -->
       <header class="order-page-header">
         Make sure ye ordered the right things, no backsies!
@@ -51,11 +51,12 @@
 
       <div class="shopping-cart">
         <!-- Klassen runt hela shoppingcart -->
+        
+          <p>Products in your shoppingcart:</p>
         <div class="title-shoppingcart">
-          Products in your shoppingcart:
-          <p>Article</p>
-          <p>Quantity</p>
-          <p>Price</p>
+          <h3 class="cart-qty">Quantity</h3>
+          <h3 class="cart-title">Article</h3>
+          <h3 class="cart-price">Price</h3>
           <!--rubriker-->
         </div>
         <br />
@@ -95,13 +96,13 @@
           <br>
           <label for ="tablenumber">Avast ye hearties! Which table arr ye at?</label>
           <input type="number" placeholder="Ex: 2,4,5">
-  </div>
-      <button class = "order-now-btn">Place order!</button> 
-      <button class = "order-more-btn">Order More?</button> 
-      <button class = "pay-btn">Pay with swish</button> 
-  </div>
+      <div>
+          <button class = "order-now-btn">Place order!</button> 
+          <button class = "order-more-btn">Order More?</button> 
+          <button class = "pay-btn">Pay with swish</button> 
+      </div>
   
-  </div>
+    </div>
   
   
       <nav class="floating-navbar">

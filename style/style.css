@@ -165,3 +165,21 @@
   text-align: end;
   font-size: 2rem;
 }
+
+.cart-qty,
+.cart-title,
+.cart-price {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
+.page-container {
+  background-color: antiquewhite;
+  position: absolute;
+  top: 150px;
+  left: 5%;
+  width: 90%;
+}
