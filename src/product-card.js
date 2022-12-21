@@ -94,41 +94,32 @@ function renderFeaturedCards() {
   let mainItem = Math.floor(Math.random() * 10);
   let dessertItem = Math.floor(Math.random() * 2);
 
-  for(key in foodItems[bevItem]){
+  featuredBeverage.append(
+    createCard(
+      foodItems.Beverages[bevItem].img,
+      foodItems.Beverages[bevItem].name,
+      foodItems.Beverages[bevItem].dsc,
+      foodItems.Beverages[bevItem].price
+    )
+  );
 
-    featuredBeverage.append(
-      createCard(
-        foodItems.Beverages[bevItem].img,
-        foodItems.Beverages[bevItem].name,
-        foodItems.Beverages[bevItem].dsc,
-        foodItems.Beverages[bevItem].price
-      )
-    );
-  }
+  featuredMainCourse.append(
+    createCard(
+      foodItems.mainCourse[mainItem].img,
+      foodItems.mainCourse[mainItem].name,
+      foodItems.mainCourse[mainItem].dsc,
+      foodItems.mainCourse[mainItem].price
+    )
+  );
 
-  for(key in foodItems[mainItem]){
-
-    featuredMainCourse.append(
-      createCard(
-        foodItems.mainCourse[mainItem].img,
-        foodItems.mainCourse[mainItem].name,
-        foodItems.mainCourse[mainItem].dsc,
-        foodItems.mainCourse[mainItem].price
-      )
-    );
-  }
-
-  for(key in foodItems[dessertItem]){
-
-    featuredDessert.append(
-      createCard(
-        foodItems.Desserts[dessertItem].img,
-        foodItems.Desserts[dessertItem].name,
-        foodItems.Desserts[dessertItem].dsc,
-        foodItems.Desserts[dessertItem].price
-      )
-    );
-  }
+  featuredDessert.append(
+    createCard(
+      foodItems.Desserts[dessertItem].img,
+      foodItems.Desserts[dessertItem].name,
+      foodItems.Desserts[dessertItem].dsc,
+      foodItems.Desserts[dessertItem].price
+    )
+  );
 }
 
 renderFeaturedCards();
