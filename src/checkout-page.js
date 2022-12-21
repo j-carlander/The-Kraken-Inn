@@ -120,6 +120,11 @@ function subtrFromCart(e) {
 //     ready()
 // }
 
+function addTotalToCart(shoppingList) {
+  let totalPrice = document.querySelector(".total-price");
+  totalPrice.innerText = calculateCartTotal(shoppingList);
+}
+
 function listProductsInCart(shoppingList) {
   console.log();
   let cartProducts = "";
@@ -136,6 +141,7 @@ function listProductsInCart(shoppingList) {
 document.getElementById("open-cart").addEventListener("click", function () {
   document.getElementById("cart").classList.toggle("hide");
   listProductsInCart(shoppingList);
+  addTotalToCart(shoppingList);
 });
 
 //ska läggas till på varje produkt i vår lista

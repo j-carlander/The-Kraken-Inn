@@ -1,7 +1,8 @@
 function calculateCartTotal(list) {
   let total = 0;
   for (let index in list) {
-    total += list[index].price;
+    let price = Number(list[index].price);
+    total += price;
   }
-  return total;
+  return total.toFixed(2);
 }

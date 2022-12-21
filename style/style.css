@@ -307,3 +307,7 @@ input {
   color: black;
   /* border-radius: 2px; */
 }
+
+.total-price::before {
+  content: "€ ";
+}
