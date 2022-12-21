@@ -311,3 +311,18 @@ input {
 .total-price::before {
   content: "€ ";
 }
+
+.thanks-pop-up {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100px;
+  background-color: #967b58;
+  border: 1px dotted #d5b78b;
+}
+
+.thanks-pop-up-btn {
+  width: 8%;
+  border: none;
+  background-color: #967b58;
+}
