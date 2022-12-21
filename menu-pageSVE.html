@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/style/style.css" /> -->
+
+    <script src="src/food_db.js" defer></script>
+    <script src="src/product-card.js" defer></script>
+    <script src="src/app.js" defer></script>
+    <script src="src/checkout-page.js" defer></script> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>Menu page</title>
+  </head>
+  <body>
+    <p>&#xe116;</p>
+    <article>
+      <h2>Dagens:</h2> <!--Three featured items-->
+      <div id="featuredBeverage" class="featured-beverage" >
+        Dryck
+      </div>
+      <div class="featured-main-course" id="featuredMainCourse">
+        Varmrätt:
+      </div>
+      <div class="featured-dessert" id="featuredDessert">
+        Dessert:
+      </div>
+    </article>
+
+    <!-- checkout page / orderinformation -->
+    <div class="page-container">
+      <!-- Klassen runt hela sidan -->
+      <header class="order-page-header">
+        Var säker på att du inte beställer fel, vi serverar ingen ångerrätt!
+      </header>
+      <!--Banner-->
+
+      <div class="shopping-cart">
+        <!-- Klassen runt hela shoppingcart -->
+        <div class="title-shoppingcart">
+          Rätter på din nota:
+          <p>Article</p>
+          <p>Quantity</p>
+          <p>Price</p>
+          <!--rubriker-->
+        </div>
+        <br />
+        <ul>
+          <li>
+              <article class ="cart-product">      <!-- Productkorten-->
+                  <span class ="article-quantity"> <!--parent över buttons och antal buttons-->
+                    <span class="cart-menu">product name</span>  
+                    <button class = "cart-minus-btn"> - </button>
+                      <button class = "cart-plus-btn"> + </button>
+                       <label for ="cart-quantity"></label> <!--Något vi vill ha? -->
+                      <input type="number" placeholder="Ex: 2">
+                      <button class = "cart-delete-btn"> Remove </button>
+                      <span class="cart-product-price">€: </span>
+                      
+                  </span>
+                  
+               </article>
+          </li>
+        </ul>
+        <br />
+
+        <div class="cart-total">
+          <p class="total-price-title">Total:</p>
+          <span class="total-price">€ </span>
+        </div>
+        <br />
+        <label for="tablenumber"
+          >Vilket bordsnummer har du?</label
+        >
+        <input type="number" placeholder="Ex: 2,4,5" />
+        <div>
+          <button class="order-now-btn">Place order!</button>
+          <br />
+          <button class="order-more-btn">Order More?</button>
+
+          <button class="pay-btn">Betala med swish!</button>
+        </div>
+      </div>
+          <br>
+          <label for ="tablenumber">Vilket bordsnummer har du?</label>
+          <input type="number" placeholder="Ex: 2,4,5">
+  </div>
+      <button class = "order-now-btn">Place order!</button> 
+      <button class = "order-more-btn">Order More?</button> 
+      <button class = "pay-btn">Betala med swish!</button> 
+  </div>
+  
+  </div>
+  
+  
+      <nav class="floating-navbar">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="index.html">Hem</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="menu-page.html">See menyn</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#">Din nota	
+              &#128722;</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#">Om oss</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <section></section>
+      <div></div>
+
+      <!-- <button class="order-more-btn">Order More!</button>
+  
+      <button class="pay-btn">Pay with swish</button> -->
+    </div>
+    <!-- special section -->
+    <article class="menu-section">
+      <!-- Navigering mellan kategorier i menyn -->
+      <nav class="menu-nav">
+        <ul class="menu-list">
+          <li class="menu-category" onclick="scrollToBeverage()">Dryck</li>
+          <li class="menu-category" onclick="scrollToAppetizers()">
+            Förrätter
+          </li>
+          <li class="menu-category" onclick="scrollToMainCourse()">
+            Varmrätter
+          </li>
+          <li class="menu-category" onclick="scrollToDesserts()">Dessert</li>
+        </ul>
+      </nav>
+      <section class="beverage-section">
+        <h3>Dryck</h3>
+        <div class="menu-container" id="Beverages"></div>
+      </section>
+
+      <section class="appetizer-section">
+        <h3>Förrätter</h3>
+        <div class="menu-container" id="Appetizer"></div>
+      </section>
+
+      <section class="main-course-section">
+        <h3>Varmrätter</h3>
+        <div class="menu-container" id="mainCourse"></div>
+      </section>
+
+      <section class="dessert-section">
+        <h3>Dessert</h3>
+        <div class="menu-container" id="Desserts"></div>
+      </section>
+    </article>
+  </body>
+</html>
