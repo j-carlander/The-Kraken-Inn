@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="/style/style.css" /> -->
 
+    <script src="src/carttotal.js" defer></script>
     <script src="src/food_db.js" defer></script>
     <script src="src/product-card.js" defer></script>
     <script src="src/app.js" defer></script>
@@ -24,7 +25,7 @@
   <body>
 
     <div class="background">
-      <p class="shopping-cart-icon" id="open-cart">&#128722;</p>
+      <p class="shopping-cart-icon" id="open-cart"> &#128220;</p>
       <div class="cart-wrapper">
         
         <div class="cart-container hide" id="cart">
@@ -37,7 +38,7 @@
           <div class="shopping-cart">
             <!-- Klassen runt hela shoppingcart -->
         
-              <p>Products in your shoppingcart:</p>
+              <p>Products on your tab:</p>
             <div class="title-shoppingcart">
               <h3 class="cart-qty">Quantity</h3>
               <h3 class="cart-title">Article</h3>
@@ -70,10 +71,7 @@
             >
             <input type="number" placeholder="Ex: 2,4,5" />
             <div>
-              <button class="order-now-btn">Place order!</button>
-              <br />
-              <button class="order-more-btn">Order More?</button>
-              <button class="pay-btn">Pay with swish</button>
+              <button class="pay-btn">Pay to order</button>
             </div>
           </div>
         </div>
