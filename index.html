@@ -5,54 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap"
+      rel="stylesheet" />
+
     <link rel="stylesheet" href="style/style.css" />
 
     <script src="src/food_db.js" defer></script>
     <script src="src/app.js" defer></script>
+    <script src="src/checkout-page.js" defer></script>
+    <script src="src/product-card.js" defer></script>
 
     <title>The Kraken Inn</title>
   </head>
   <body>
     <!-- Välkomstsidan -->
-    <header class="main-header">
-      <img src="images/main-banner.png" alt="" />
-      <h1 class="main-heading">
-        Ahoy scallywag,
-        <span class="main-heading-span">welcome to </span>
-        The Kraken Inn!
-      </h1>
-    </header>
-    <nav class="floating-navbar">
-      <ul class="nav-list">
-        <li class="nav-list-item">
-          <a href="#">Home</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="menu-page.html">See Menu</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="checkout-page.html">Your Cart</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="#">About us</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <!-- lägga in logga  -->
-    <!-- skapa klasser för de olika P -->
-    <section class="locale-section">
-      <h2 class="locale-heading">Choose your preferred language</h2>
-      <div class="locale-btn-group">
-        <div class="locale-btn1"></div>
-        <div class="locale-btn2"></div>
+    <div class="background">
+      <header class="main-header">
+        <img src="images/main-banner.png" alt="" />
+        <h1 class="main-heading">
+          Ahoy scallywag,
+          <span class="main-heading-span">welcome to </span>
+          The Kraken Inn!
+        </h1>
+      </header>
+      <nav class="floating-navbar">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="menu-page.html">See Menu</a>
+          </li>
+          <!-- <li class="nav-list-item">
+          <a href="checkout-page.html">Your Cart &#128722;</a>
+        </li> -->
+          <li class="nav-list-item">
+            <a href="#">About us</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- lägga in logga  -->
+      <!-- skapa klasser för de olika P -->
+      <div class="flex-container">
+        <section class="locale-section">
+          <h2 class="locale-heading">Choose your preferred language</h2>
+          <div class="locale-btn-group">
+            <a href="index-SVE.html" class="locale-btn1"></a>
+            <a href="#" class="locale-btn2"></a>
+          </div>
+        </section>
+        <p class="quote">
+          Order some grub or maybe some rum and three Sheets to the Wind ye will
+          become!
+        </p>
+        <a class="btn" href="menu-page.html">Welcome In</a>
       </div>
-    </section>
-    <p>
-      Order some grub or maybe some rum and three Sheets to the Wind ye will
-      become!
-    </p>
+    </div>
   </body>
 </html>
