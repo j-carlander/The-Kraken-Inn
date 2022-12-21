@@ -22,6 +22,7 @@
     <title>Menu page</title>
   </head>
   <body>
+
     <div class="background">
       <p class="shopping-cart-icon" id="open-cart"> &#128220;</p>
       <div class="cart-wrapper">
@@ -101,28 +102,23 @@
      <div class="todays-offers-container">
       <h2>Today's special</h2>
       <article class ="todays-offer">
-      <div>
+      <div class="featured-beverage"  id="featuredBeverage">
         Beverages
-
-        <button class="order-btn">Buy now</button>
-        <!--Samma class till alla beställningar, "order-btn"-->
       </div>
-      <div>
+      <div class="featured-main-course" id="featuredMainCourse">
         Main course
-        <button class="order-btn">Buy now</button>
       </div>
-      <div>
+      <div class="featured-dessert" id="featuredDessert">
         Dessert
-        <button class="order-btn">Buy now</button>
       </div>
-      <!-- skapa class för button order meal of the day -->
     </article>
-
+    
   </div>
     
     <!-- checkout page / orderinformation -->
 
     <div class="page-container hide" id="cart">
+
       <!-- Klassen runt hela sidan -->
       <header class="order-page-header">
         Make sure ye ordered the right things, no backsies!
@@ -131,7 +127,6 @@
 
       <div class="shopping-cart">
         <!-- Klassen runt hela shoppingcart -->
-        
           <p>Products in your shoppingcart:</p>
         <div class="title-shoppingcart">
           <h3 class="cart-qty">Quantity</h3>
@@ -173,9 +168,6 @@
           <button class="pay-btn">Pay with swish</button>
         </div>
       </div>
-    </div>
-  
-  
 
       <section></section>
       <div></div>
@@ -183,7 +175,8 @@
       <!-- <button class="order-more-btn">Order More!</button>
   
       <button class="pay-btn">Pay with swish</button> -->
-    
+    </div>
+
     <!-- special section -->
     <article class="menu-section">
       <!-- Navigering mellan kategorier i menyn -->

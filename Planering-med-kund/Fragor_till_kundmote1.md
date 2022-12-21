@@ -35,3 +35,21 @@
   kl 10.00
 
 Har en bar, ska gå att beställa en drink, och sedan kunna gå in och beställa en till.
+
+# Kundmöte 2
+
+- nota ist för kundvagn
+
+- ta bort x och - från notan, lagd order ligger
+
+- ta bort knappen place order
+
+- få bekräftelse, vill du beställa?, när man klickar i antal, beställs direkt
+
+- så här mkt har du beställt för nu i bekräftelsen
+
+- vid första vara be om bordsnr i bekräftelsen
+
+- bordsnr med i bekräftelsen
+
+- ta med tak för notan.
