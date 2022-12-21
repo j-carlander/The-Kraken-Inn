@@ -206,9 +206,10 @@ li {
 
 .shopping-cart-icon {
   font-size: 2rem;
-  text-align: end;
+  text-align: start;
   position: sticky;
   top: 0;
+  transform: scale(-1);
 }
 .menu-nav {
   background-color: #b89a72;
