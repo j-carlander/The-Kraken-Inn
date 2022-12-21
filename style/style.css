@@ -1,0 +1,339 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-heading {
+  font-family: "Love Ya Like A Sister", cursive;
+  padding: 1em 2em;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.main-heading-span {
+  font-size: 1.75rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2em auto;
+}
+
+.nav-list-item {
+  list-style: none;
+}
+.nav-list-item a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  background-color: #b89a72;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Love Ya Like A Sister", cursive;
+}
+
+.locale-btn-group {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+  margin: 2em auto;
+}
+.locale-btn1 {
+  background-image: url("../images/sv-flag.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10em;
+  height: 5em;
+  border-radius: 8px;
+}
+.locale-btn2 {
+  background-image: url("../images/gb-flag.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10em;
+  height: 5em;
+  border-radius: 8px;
+}
+
+.quote {
+  margin: 2em auto;
+}
+
+.btn {
+  width: 60%;
+  padding: 1em 1em;
+  border: 5px outset #b88e57;
+  background-color: #d5b78b;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 1.5em;
+}
+.btn:hover {
+  background-color: #f8d5a1;
+}
+.btn:active {
+  border: 5px inset #b88e57;
+  background-color: #d5b78b;
+}
+
+/* Product card */
+.product-card {
+  width: 310px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #b88e57;
+  margin-top: 0.5em;
+  padding: 0.3em;
+  height: 10em;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.242);
+  border-radius: 2px;
+  border: 12px solid #b89a72;
+}
+
+.img-container {
+  width: 90px;
+  height: 90px;
+}
+.product-img {
+  width: 100%;
+  margin: 1.5em 0 2em 0;
+}
+.product-info {
+  display: grid;
+  grid-template-areas:
+    "title price"
+    "desc price"
+    "btns btns";
+  grid-template-columns: 150px 55px;
+}
+
+.product-title {
+  grid-area: title;
+  text-align: center;
+}
+.product-description {
+  grid-area: desc;
+}
+
+.product-price {
+  grid-area: price;
+  place-self: center;
+}
+.product-price::before {
+  content: "€ ";
+}
+
+.add-to-cart-btns {
+  grid-area: btns;
+  place-self: center;
+  /* width: 100%; */
+}
+
+/* .add-to-cart-btns form {
+ 
+  place-self: center; 
+   display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+}*/
+.subtr-qty-btn,
+.add-qty-btn,
+.product-qty-disp {
+  width: 2em;
+  display: inline;
+  padding: 0.5em;
+}
+
+/* skapa mobilanpassad, lägg in måtten */
+/* (Jonathan): Utgår från "mobile first".*/
+/* @media only screen {
+    
+} */
+/* --------------- Menu page / checkout ------------- */
+
+body,
+html {
+  font-family: "Love Ya Like A Sister", cursive;
+  background-image: url(../images/pirateShip.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #b89a72;
+}
+/* .background {
+  padding: 0.5em; 
+} */
+
+li {
+  list-style-type: none;
+}
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.menu-section {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+  /* ändra till block för att se hela tiden */
+}
+
+.cart-wrapper {
+  position: sticky;
+  top: 60px;
+}
+.cart-container {
+  background-color: #b89a72;
+  position: absolute;
+  top: 0;
+
+  padding: 0.5em;
+  border: 2px solid rgb(86, 79, 79);
+  border-radius: 3px;
+
+  color: #fff;
+}
+
+.shopping-cart-icon {
+  font-size: 2rem;
+  text-align: start;
+  position: sticky;
+  top: 0;
+  transform: scale(-1);
+}
+.menu-nav {
+  background-color: #b89a72;
+  display: flex;
+  justify-content: center;
+  width: 310px;
+  border-radius: 2px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.242);
+}
+.menu-list {
+  padding: 0.5em 0;
+}
+.menu-list li {
+  padding: 0.5em 0;
+}
+.cart-qty,
+.cart-title,
+.cart-price {
+  display: inline-block;
+}
+.add-to-cart-btns {
+  display: inline;
+}
+
+.order-btn {
+  color: black;
+  border-radius: 5%;
+
+  padding: 0.2em 0.5em;
+  margin: 0.5em 0;
+
+  border: 5px outset #b88e57;
+  background-color: #d5b78b;
+}
+
+.todays-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  background-color: #947d5d;
+  padding: 0.8em 0.5em;
+  width: 90%;
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+.todays-offer div {
+  padding: 0.3em 0;
+  font-weight: 600;
+}
+.todays-offers-container h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.todays-offers-container .product-card {
+  box-shadow: none;
+}
+
+.featured-beverage,
+.featured-main-course {
+  margin-bottom: 1em;
+}
+
+.featured-beverage,
+.featured-main-course,
+.featured-dessert {
+  background-color: #b89a72;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.242);
+}
+
+h3 {
+  margin: 0.5em 0;
+  /* color: #fff; */
+  color: black;
+}
+
+/* -------- shopping cart --------- */
+
+.shopping-cart {
+  padding-top: 1em;
+}
+.input-table-nmbr {
+  padding: 1em;
+}
+input {
+  padding: 0.2em 0.3em;
+}
+.order-now-btn,
+.order-more-btn,
+.pay-btn {
+  padding: 0.5em;
+  margin: 0.5em 0;
+
+  border: 5px outset #b88e57;
+  background-color: #d5b78b;
+  color: black;
+  /* border-radius: 2px; */
+}
+
+.total-price::before {
+  content: "€ ";
+}
+
+.thanks-pop-up {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100px;
+  background-color: #967b58;
+  border: 1px dotted #d5b78b;
+}
+
+.thanks-pop-up-btn {
+  width: 8%;
+  border: none;
+  background-color: #967b58;
+}

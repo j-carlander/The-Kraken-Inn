@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/style/style.css" /> -->
+
+    <script src="src/carttotal.js" defer></script>
+    <script src="src/food_db.js" defer></script>
+    <script src="src/product-card.js" defer></script>
+    <script src="src/app.js" defer></script>
+    <script src="src/checkout-page.js" defer></script> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>Menu page</title>
+  </head>
+  <body>
+    <div class="background">
+      <p class="shopping-cart-icon" id="open-cart"> &#128220;</p>
+      <div class="cart-wrapper">
+        
+        <div class="cart-container hide" id="cart">
+        
+          <!-- Klassen runt hela sidan -->
+          <header class="order-page-header">
+            Make sure ye ordered the right things, no backsies!
+          </header>
+          <!--Banner-->
+          <div class="shopping-cart">
+            <!-- Klassen runt hela shoppingcart -->
+        
+              <p>Products on your tab:</p>
+            <div class="title-shoppingcart">
+              <h3 class="cart-qty">Quantity</h3>
+              <h3 class="cart-title">Article</h3>
+              <h3 class="cart-price">Price</h3>
+              <!--rubriker-->
+            </div>
+            <br />
+            <ul class="shopping-cart-list">
+              <li>
+                  <div class="product-qty-disp">0</div>
+                <!-- Productkorten-->
+                <!--parent över buttons och antal buttons-->
+                <span class="cart-product-name">product name</span>
+                <span class="cart-product-price"></span>
+                <button class="cart-delete-btn"> X </button>
+              </li>
+            </ul>
+            <br />
+            <div class="cart-total">
+              <p class="total-price-title">Total</p>
+              <span class="total-price">€ </span>
+            </div>
+            <br />
+            <label for="tablenumber"
+              >Avast ye hearties! Which table arr ye at?</label
+            >
+            <input type="number" placeholder="Ex: 2,4,5" />
+            <div>
+              <button class="pay-btn">Pay to order</button>
+              <div class="thanks-pop-up">
+                <h4 class="thanks-pop-up-title">Thank you for your order!</h4>
+                <p class="thanks-pop-up-msg">-Your order has gone through-</p>
+                <button class="thanks-pop-up-btn">X</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <nav class="floating-navbar">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="menu-page.html">See Menu</a>
+          </li>
+          <!-- <li class="nav-list-item">
+            <a href="#">Your Cart	
+              &#128722;</a>
+          </li> -->
+          <li class="nav-list-item">
+            <a href="#">About us</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    <div class="todays-offers-container">
+      <h2>Today's special</h2>
+      <article class ="todays-offer">
+        <div class="featured-beverage" id="featuredBeverage">
+          Beverages
+        </div>
+        <div class="featured-main-course" id="featuredMainCourse">
+          Main course
+        </div>
+        <div class="featured-dessert" id="featuredDessert">
+          Dessert
+        </div>
+      </article>
+    </div>
+
+    <!-- special section -->
+    <article class="menu-section">
+      <!-- Navigering mellan kategorier i menyn -->
+      <nav class="menu-nav">
+        <ul class="menu-list">
+          <li class="menu-category" onclick="scrollToBeverage()">Beverages</li>
+          <li class="menu-category" onclick="scrollToAppetizers()">
+            Appetizers
+          </li>
+          <li class="menu-category" onclick="scrollToMainCourse()">
+            Main Courses
+          </li>
+          <li class="menu-category" onclick="scrollToDesserts()">Desserts</li>
+        </ul>
+      </nav>
+      <section class="beverage-section">
+        <h3>Beverages</h3>
+        <div class="menu-container" id="Beverages"></div>
+      </section>
+
+      <section class="appetizer-section">
+        <h3>Appetizers</h3>
+        <div class="menu-container" id="Appetizer"></div>
+      </section>
+
+      <section class="main-course-section">
+        <h3>Main Course</h3>
+        <div class="menu-container" id="mainCourse"></div>
+      </section>
+
+      <section class="dessert-section">
+        <h3>Dessert</h3>
+        <div class="menu-container" id="Desserts"></div>
+      </section>
+    </article>
+  </div>
+</div>
+  </body>
+</html>

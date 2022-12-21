@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="src/food_db.js" defer></script>
+    <script src="src/app.js" defer></script>
+
+    <!-- komma ihåg att länka från menu-page! -->
+
+    <title>order page</title>
+</head>
+<body>
+    <div class = "page-container"> <!-- Klassen runt hela sidan -->
+<header class="order-page-header">Make sure ye ordered the right things,
+    no backsies!</header> <!--Banner-->
+    
+<div class ="shopping-cart">     <!-- Klassen runt hela shoppingcart -->
+    <div class = "title-shoppingcart">
+      Products in your shoppingcart:
+    </div>
+<br>
+    <ul>
+        <li>
+            <article class ="cart-product">      <!-- Productkorten-->
+                <button class = "cart-delete-btn"> X </button>
+                <span class = "cart-pruduct"> Cola</span>
+                <button class = "cart-minus-btn"> - </button>
+                <span article-quantity>"5"</span>
+                <button class = "cart-plus-btn"> + </button>
+                <span class="cart-product-price">Price: </span>
+             </article>
+        </li>
+    </ul>
+<br>
+
+
+    <div class="cart-total">
+        <p class = "total-price-title">Total </p>
+        <span class="total-price">€ 14,9</span>
+    </div>
+        <br>
+        <label for ="tablenumber">Avast ye hearties! Which table arr ye at?</label>
+        <input type="number" placeholder="Ex: 2,4,5">
+    </div>
+    <button class = "order-now-btn">Place order!</button> 
+    <br>
+    <button class = "order-more-btn">Order More?</button> 
+
+    <button class = "pay-btn">Pay with swish</button> 
+</div>
+
+</div>
+
+
+    <nav class="floating-navbar">
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="menu-page.html">See Menu</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#">Your Cart</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#">About us</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <section></section>
+    <div></div>
+
+    <button class="order-more-btn">Order More!</button>
+
+    <button class="pay-btn">Pay with swish</button>
+  </body>
+</html>
