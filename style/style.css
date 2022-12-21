@@ -96,7 +96,7 @@
   margin-top: 0.5em;
   padding: 0.3em;
   height: 10em;
-
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.242);
   border-radius: 2px;
   border: 12px solid #b89a72;
 }
@@ -167,6 +167,7 @@ html {
   background-image: url(../images/pirateShip.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #b89a72;
 }
 .background {
   /* padding: 0.5em; */
@@ -179,6 +180,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2em;
 }
 .menu-section {
   text-align: center;
@@ -218,12 +220,14 @@ li {
   width: 310px;
   border-radius: 2px;
   margin: 0 auto;
+  margin-bottom: 1em;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.242);
 }
 .menu-list {
   padding: 0.5em 0;
 }
 .menu-list li {
-  padding: 0.2em 0;
+  padding: 0.5em 0;
 }
 .cart-qty,
 .cart-title,
@@ -248,11 +252,14 @@ li {
 .todays-offer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: black;
   background-color: #b89a72;
   padding: 0.8em 0.5em;
   width: 100%;
   border-radius: 3px;
+  margin-bottom: 2em;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.242);
 }
 .todays-offer div {
   padding: 0.3em 0;
