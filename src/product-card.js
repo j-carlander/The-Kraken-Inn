@@ -48,10 +48,12 @@ function createCard(imgSrc, name, descr, price) {
 
   subtrQtyBtn.addEventListener("click", (e) => {
     console.log(e.target.nextElementSibling);
+    subtrFromCart(e);
   });
 
   addQtyBtn.addEventListener("click", (e) => {
-    console.log(e.target.previousElementSibling);
+    // console.log(e.target.previousElementSibling);
+    addToCart(e);
   });
 
   // Append HTML structure to card
@@ -59,7 +61,14 @@ function createCard(imgSrc, name, descr, price) {
 
   addToCartBtns.append(subtrQtyBtn, productQtyDisp, addQtyBtn);
 
-  productInfo.append(productName, productDescription, productPrice, addToCartBtns);
+
+  productInfo.append(
+    productName,
+    productDescription,
+    productPrice,
+    addToCartBtns
+  );
+
 
   productCard.append(imgContainer, productInfo);
 
