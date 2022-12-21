@@ -23,7 +23,7 @@ const payBtn = document.querySelector(".pay-btn");
 // }
 // let productToCart = document.q
 
-payBtn.addEventListener(() => {
+payBtn.addEventListener("click", () => {
   alert("Thank you for your order!");
 });
 
