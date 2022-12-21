@@ -68,6 +68,7 @@ function createCard(imgSrc, name, descr, price) {
 
 function renderCards() {
   for (const key in foodItems) {
+    
     let container = document.getElementById(`${key}`);
 
     for (const item in foodItems[key]) {
@@ -83,4 +84,54 @@ function renderCards() {
   }
 }
 
+function renderFeaturedCards() {
+  const featuredBeverage = document.getElementById('featuredBeverage');
+  const featuredMainCourse= document.getElementById('featuredMainCourse');
+  const featuredDessert = document.getElementById('featuredDessert');
+  
+
+  let bevItem = Math.floor(Math.random() * 3);
+  let mainItem = Math.floor(Math.random() * 10);
+  let dessertItem = Math.floor(Math.random() * 2);
+
+  for(key in foodItems[bevItem]){
+
+    featuredBeverage.append(
+      createCard(
+        foodItems.Beverages[bevItem].img,
+        foodItems.Beverages[bevItem].name,
+        foodItems.Beverages[bevItem].dsc,
+        foodItems.Beverages[bevItem].price
+      )
+    );
+  }
+
+  for(key in foodItems[mainItem]){
+
+    featuredMainCourse.append(
+      createCard(
+        foodItems.mainCourse[mainItem].img,
+        foodItems.mainCourse[mainItem].name,
+        foodItems.mainCourse[mainItem].dsc,
+        foodItems.mainCourse[mainItem].price
+      )
+    );
+  }
+
+  for(key in foodItems[dessertItem]){
+
+    featuredDessert.append(
+      createCard(
+        foodItems.Desserts[dessertItem].img,
+        foodItems.Desserts[dessertItem].name,
+        foodItems.Desserts[dessertItem].dsc,
+        foodItems.Desserts[dessertItem].price
+      )
+    );
+  }
+}
+
+renderFeaturedCards();
 renderCards();
+
+
