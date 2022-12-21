@@ -202,6 +202,8 @@ li {
 .shopping-cart-icon {
   font-size: 2rem;
   text-align: end;
+  position: sticky;
+  top: 0;
 }
 
 .cart-qty,
