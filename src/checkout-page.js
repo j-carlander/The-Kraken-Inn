@@ -5,6 +5,7 @@ let shoppingCart = document.querySelector(".shopping-cart");
 // let addToCheckoutBtn = document.querySelector(".add-qty-btn");
 let plusBtn = document.querySelector(".cart-plus-btn");
 
+const payBtn = document.querySelector(".pay-btn");
 // addToCheckoutBtn.addEventListener('click', addToCheckoutClicked)
 // function addToCheckoutClicked(event){
 //     console.log("clicked")
@@ -21,6 +22,10 @@ let plusBtn = document.querySelector(".cart-plus-btn");
 //     // item.append(allProducts);
 // }
 // let productToCart = document.q
+
+payBtn.addEventListener("click", () => {
+  alert("Thank you for your order!");
+});
 
 function findIndexOf(article) {
   return shoppingList.findIndex((item) => item.title == article.title); // returns the index of article or -1 if not found
