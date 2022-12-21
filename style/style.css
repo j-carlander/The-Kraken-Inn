@@ -202,7 +202,20 @@ li {
 .shopping-cart-icon {
   font-size: 2rem;
 }
-
+.menu-nav {
+  background-color: #b89a72;
+  display: flex;
+  justify-content: center;
+  width: 310px;
+  border-radius: 2px;
+  margin: 0 auto;
+}
+.menu-list {
+  padding: 0.5em 0;
+}
+.menu-list li {
+  padding: 0.2em 0;
+}
 .cart-qty,
 .cart-title,
 .cart-price {
@@ -215,6 +228,8 @@ li {
 .order-btn {
   color: black;
   border-radius: 5%;
+
+  padding: 0.2em 0.5em;
 }
 
 .todays-offer {
@@ -222,12 +237,18 @@ li {
   flex-direction: column;
   color: black;
   background-color: #b89a72;
-  width: 10rem;
+  padding: 0.8em 0.5em;
+  width: 100%;
+  border-radius: 3px;
+}
+.todays-offer div {
+  padding: 0.3em 0;
 }
 
 h3 {
   margin: 0.5em 0;
-  color: #fff;
+  /* color: #fff; */
+  color: black;
 }
 
 /* -------- shopping cart --------- */
@@ -250,14 +271,13 @@ input {
   border: 5px outset #b88e57;
   background-color: #d5b78b;
   color: black;
+  /* border-radius: 2px; */
 }
-/*
-width: 60%;
-padding: 1em 1em;
-border: 5px outset #b88e57;
-background-color: #d5b78b;
-text-align: center;
-text-decoration: none;
-color: black;
-font-family: "Love Ya Like A Sister", cursive;
-font-size: 1.5em;*/
+
+.shopping-cart-icon {
+}
+
+a {
+  color: black;
+  background-color: #b89a72;
+}
