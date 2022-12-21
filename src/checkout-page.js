@@ -181,13 +181,20 @@ function updateCartTotal() {
 //Adding history function to orders by saving to local
 //storage when pressing order button
 
-const orderBtn = document.querySelector(".order-now-btn");
+const payBtn = document.querySelector(".pay-btn");
 
-orderBtn.addEventListener("click", storePrevOrder);
+payBtn.addEventListener("click", storePrevOrder);
 
 function storePrevOrder() {
   for (item of shoppingList) {
     localStorage.setItem(JSON.stringify(item), history);
-    console.log(localStorage);
   }
+}
+
+const historyBtn = document.querySelector(".history-btn");
+
+historyBtn.addEventListener("click", displayHistory);
+
+function displayHistory() {
+  console.log(localStorage);
 }
