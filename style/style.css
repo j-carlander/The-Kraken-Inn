@@ -281,7 +281,8 @@ input {
 .shopping-cart-icon {
 }
 
-a {
+.nav-list a {
   color: black;
   background-color: #b89a72;
+  padding: 0.3em 0.7em;
 }
