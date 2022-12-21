@@ -230,6 +230,10 @@ li {
   border-radius: 5%;
 
   padding: 0.2em 0.5em;
+  margin: 0.5em 0;
+
+  border: 5px outset #b88e57;
+  background-color: #d5b78b;
 }
 
 .todays-offer {
