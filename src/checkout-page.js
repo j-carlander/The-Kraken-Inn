@@ -124,49 +124,13 @@ function listProductsInCart(shoppingList) {
   console.log();
   let cartProducts = "";
   for (let i = 0; i < shoppingList.length; i++) {
-    cartProducts += `          <li>
-    <div class="add-to-cart-btns">
-      <button class="subtr-qty-btn">-</button>
-      <div class="product-qty-disp">${shoppingList[i].quantity}</div>
-      <button class="add-qty-btn">+</button>
-    </div>
+    cartProducts += `<li>
+    <div class="product-qty-disp">${shoppingList[i].quantity}</div>
     <span class="cart-product-name">${shoppingList[i].title}</span>                      
     <span class="cart-product-price">${shoppingList[i].price}</span>
-    <button class="cart-delete-btn">X</button>
   </li>`;
   }
   document.querySelector(".shopping-cart-list").innerHTML = cartProducts;
-
-  let delButtons = document
-    .querySelector(".shopping-cart-list")
-    .querySelectorAll(".cart-delete-btn"); // finding all buttons just created in the for-loop listing cartProducts
-
-  for (let i = 0; i < delButtons.length; i++) {
-    delButtons[i].addEventListener("click", () => {
-      delButtons[i].parentElement.remove(); // When the button is clicked it removes its parent elemnet in the DOM
-      shoppingCart.splice(i, 1); // and removes corresponding item in the shoppingCart array.
-      updateCart();
-    });
-  }
-  let subtrQtyBtns = document
-    .querySelector(".shopping-cart-list")
-    .querySelectorAll(".subtr-qty-btn");
-  for (i = 0; i < subtrQtyBtns.length; i++) {
-    subtrQtyBtns[i].addEventListener("click", (e) => {
-      // console.log(e.target.nextElementSibling);
-      // subtrFromCart(e);
-    });
-  }
-  let addQtyBtns = document
-    .querySelector(".shopping-cart-list")
-    .querySelectorAll(".add-to-cart-btns");
-
-  for (i = 0; i < addQtyBtns.length; i++) {
-    addQtyBtns[i].addEventListener("click", (e) => {
-      // console.log(e.target.previousElementSibling);
-      addToCart(e);
-    });
-  }
 }
 
 document.getElementById("open-cart").addEventListener("click", function () {
