@@ -190,7 +190,7 @@ li {
 .page-container {
   background-color: #b89a72;
   position: absolute;
-  top: 150px;
+  top: 60px;
 
   padding: 0.5em;
   border: 2px solid rgb(86, 79, 79);
@@ -201,6 +201,7 @@ li {
 
 .shopping-cart-icon {
   font-size: 2rem;
+  text-align: end;
 }
 
 .cart-qty,
