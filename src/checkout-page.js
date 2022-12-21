@@ -154,7 +154,7 @@ function listProductsInCart(shoppingList) {
   for (i = 0; i < subtrQtyBtns.length; i++) {
     subtrQtyBtns[i].addEventListener("click", (e) => {
       // console.log(e.target.nextElementSibling);
-      subtrFromCart(e);
+      // subtrFromCart(e);
     });
   }
   let addQtyBtns = document
