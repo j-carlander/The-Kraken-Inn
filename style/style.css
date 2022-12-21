@@ -258,13 +258,12 @@ li {
   flex-direction: column;
   align-items: center;
   color: black;
-  background-color: #b89a72;
+  background-color: #b88e57;
   padding: 0.8em 0.5em;
-  width: 94%;
+  width: 90%;
   border-radius: 3px;
   margin: 0 auto;
   margin-bottom: 2em;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.242);
 }
 .todays-offer div {
   padding: 0.3em 0;
@@ -276,6 +275,18 @@ li {
 }
 .todays-offers-container .product-card {
   box-shadow: none;
+}
+
+.featured-beverage,
+.featured-main-course {
+  margin-bottom: 1em;
+}
+
+.featured-beverage,
+.featured-main-course,
+.featured-dessert {
+  background-color: #b89a72;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.242);
 }
 
 h3 {
