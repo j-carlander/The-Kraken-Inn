@@ -24,6 +24,60 @@
   <body>
     <div class="background">
       <p class="shopping-cart-icon" id="open-cart">&#128722;</p>
+      <div class="cart-wrapper">
+        
+        <div class="cart-container hide" id="cart">
+        
+          <!-- Klassen runt hela sidan -->
+          <header class="order-page-header">
+            Make sure ye ordered the right things, no backsies!
+          </header>
+          <!--Banner-->
+          <div class="shopping-cart">
+            <!-- Klassen runt hela shoppingcart -->
+        
+              <p>Products in your shoppingcart:</p>
+            <div class="title-shoppingcart">
+              <h3 class="cart-qty">Quantity</h3>
+              <h3 class="cart-title">Article</h3>
+              <h3 class="cart-price">Price</h3>
+              <!--rubriker-->
+            </div>
+            <br />
+            <ul class="shopping-cart-list">
+              <li>
+                <div class="add-to-cart-btns">
+                  <button class="subtr-qty-btn">-</button>
+                  <div class="product-qty-disp">0</div>
+                  <button class="add-qty-btn">+</button>
+                </div>
+                <!-- Productkorten-->
+                <!--parent över buttons och antal buttons-->
+                <span class="cart-product-name">product name</span>
+                <span class="cart-product-price"></span>
+                <button class="cart-delete-btn"> X </button>
+              </li>
+            </ul>
+            <br />
+            <div class="cart-total">
+              <p class="total-price-title">Total</p>
+              <span class="total-price">€ </span>
+            </div>
+            <br />
+            <label for="tablenumber"
+              >Avast ye hearties! Which table arr ye at?</label
+            >
+            <input type="number" placeholder="Ex: 2,4,5" />
+            <div>
+              <button class="order-now-btn">Place order!</button>
+              <br />
+              <button class="order-more-btn">Order More?</button>
+              <button class="pay-btn">Pay with swish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <nav class="floating-navbar">
         <ul class="nav-list">
           <li class="nav-list-item">

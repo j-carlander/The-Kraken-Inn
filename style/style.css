@@ -187,10 +187,15 @@ li {
   display: none;
   /* ändra till block för att se hela tiden */
 }
-.page-container {
+
+.cart-wrapper {
+  position: sticky;
+  top: 60px;
+}
+.cart-container {
   background-color: #b89a72;
   position: absolute;
-  top: 60px;
+  top: 0;
 
   padding: 0.5em;
   border: 2px solid rgb(86, 79, 79);
