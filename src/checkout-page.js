@@ -207,3 +207,17 @@ function updateCartTotal() {
   }
   document.getElementsByClassName("total-price")[0].innerText = total; //
 }
+
+//Adding history function to orders by saving to local
+//storage when pressing order button
+
+const orderBtn = document.querySelector(".order-now-btn");
+
+orderBtn.addEventListener("click", storePrevOrder);
+
+function storePrevOrder() {
+  for (item of shoppingList) {
+    localStorage.setItem(JSON.stringify(item), history);
+    console.log(localStorage);
+  }
+}
