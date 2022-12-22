@@ -10,7 +10,7 @@
     <script src="src/food_db.js" defer></script>
     <script src="src/product-card.js" defer></script>
     <script src="src/app.js" defer></script>
-    <script src="src/checkout-page.js" defer></script> 
+    <script src="src/checkout-page.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,11 +24,9 @@
   </head>
   <body>
     <div class="background">
-      <p class="shopping-cart-icon" id="open-cart"> &#128220;</p>
+      <p class="shopping-cart-icon cursor-pointer" id="open-cart">&#128220;</p>
       <div class="cart-wrapper">
-        
         <div class="cart-container hide" id="cart">
-        
           <!-- Klassen runt hela sidan -->
           <header class="order-page-header">
             Make sure ye ordered the right things, no backsies!
@@ -36,8 +34,8 @@
           <!--Banner-->
           <div class="shopping-cart">
             <!-- Klassen runt hela shoppingcart -->
-        
-              <p>Products on your tab:</p>
+
+            <p>Products on your tab:</p>
             <div class="title-shoppingcart">
               <h3 class="cart-qty">Quantity</h3>
               <h3 class="cart-title">Article</h3>
@@ -47,12 +45,12 @@
             <br />
             <ul class="shopping-cart-list">
               <li>
-                  <div class="product-qty-disp">0</div>
+                <div class="product-qty-disp">0</div>
                 <!-- Productkorten-->
                 <!--parent över buttons och antal buttons-->
                 <span class="cart-product-name">product name</span>
                 <span class="cart-product-price"></span>
-                <button class="cart-delete-btn"> X </button>
+                <button class="cart-delete-btn cursor-pointer">X</button>
               </li>
             </ul>
             <br />
@@ -66,7 +64,7 @@
             >
             <input type="number" placeholder="Ex: 2,4,5" />
             <div>
-              <button class="pay-btn">Pay to order</button>
+              <button class="pay-btn cursor-pointer">Pay to order</button>
               <div class="confirm-pop-up hide">
                 <p class="confirm-pop-up-msg">-Confirm your order-</p>
                 <div class="confirm-btns-container">
@@ -75,86 +73,93 @@
                 </div>
               </div>
               <div class="thanks-pop-up hide">
-                <button class="thanks-pop-up-btn">X</button>
+                <button class="thanks-pop-up-btn cursor-pointer">X</button>
                 <h4 class="thanks-pop-up-title">Thank you for your order!</h4>
                 <p class="thanks-pop-up-msg">-Your order has gone through-</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <nav class="floating-navbar">
-        <ul class="nav-list">
-          <li class="nav-list-item">
-            <a href="index.html">Home</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="menu-page.html">See Menu</a>
-          </li>
-          <!-- <li class="nav-list-item">
+
+        <nav class="floating-navbar">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="menu-page.html">See Menu</a>
+            </li>
+            <!-- <li class="nav-list-item">
             <a href="#">Your Cart	
               &#128722;</a>
           </li> -->
-          <li class="nav-list-item">
-            <a href="#">About us</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    <div class="todays-offers-container">
-      <h2>Today's special</h2>
-      <article class ="todays-offer">
-        <div class="featured-beverage" id="featuredBeverage">
-          Beverages
+            <li class="nav-list-item">
+              <a href="#">About us</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="todays-offers-container">
+          <h2>Today's special</h2>
+          <article class="todays-offer">
+            <div class="featured-beverage" id="featuredBeverage">Beverages</div>
+            <div class="featured-main-course" id="featuredMainCourse">
+              Main course
+            </div>
+            <div class="featured-dessert" id="featuredDessert">Dessert</div>
+          </article>
         </div>
-        <div class="featured-main-course" id="featuredMainCourse">
-          Main course
-        </div>
-        <div class="featured-dessert" id="featuredDessert">
-          Dessert
-        </div>
-      </article>
+
+        <!-- special section -->
+        <article class="menu-section">
+          <!-- Navigering mellan kategorier i menyn -->
+          <nav class="menu-nav">
+            <ul class="menu-list">
+              <li
+                class="menu-category cursor-pointer"
+                onclick="scrollToBeverage()">
+                Beverages
+              </li>
+              <li
+                class="menu-category cursor-pointer"
+                onclick="scrollToAppetizers()">
+                Appetizers
+              </li>
+              <li
+                class="menu-category cursor-pointer"
+                onclick="scrollToMainCourse()">
+                Main Courses
+              </li>
+              <li
+                class="menu-category cursor-pointer"
+                onclick="scrollToDesserts()">
+                Desserts
+              </li>
+            </ul>
+          </nav>
+          <section class="beverage-section">
+            <h3>Beverages</h3>
+            <div class="menu-container" id="Beverages"></div>
+          </section>
+
+          <section class="appetizer-section">
+            <h3>Appetizers</h3>
+            <div class="menu-container" id="Appetizer"></div>
+          </section>
+
+          <section class="main-course-section">
+            <h3>Main Course</h3>
+            <div class="menu-container" id="mainCourse"></div>
+          </section>
+
+          <section class="dessert-section">
+            <h3>Dessert</h3>
+            <div class="menu-container" id="Desserts"></div>
+          </section>
+        </article>
+      </div>
     </div>
-
-    <!-- special section -->
-    <article class="menu-section">
-      <!-- Navigering mellan kategorier i menyn -->
-      <nav class="menu-nav">
-        <ul class="menu-list">
-          <li class="menu-category" onclick="scrollToBeverage()">Beverages</li>
-          <li class="menu-category" onclick="scrollToAppetizers()">
-            Appetizers
-          </li>
-          <li class="menu-category" onclick="scrollToMainCourse()">
-            Main Courses
-          </li>
-          <li class="menu-category" onclick="scrollToDesserts()">Desserts</li>
-        </ul>
-      </nav>
-      <section class="beverage-section">
-        <h3>Beverages</h3>
-        <div class="menu-container" id="Beverages"></div>
-      </section>
-
-      <section class="appetizer-section">
-        <h3>Appetizers</h3>
-        <div class="menu-container" id="Appetizer"></div>
-      </section>
-
-      <section class="main-course-section">
-        <h3>Main Course</h3>
-        <div class="menu-container" id="mainCourse"></div>
-      </section>
-
-      <section class="dessert-section">
-        <h3>Dessert</h3>
-        <div class="menu-container" id="Desserts"></div>
-      </section>
-    </article>
-  </div>
-</div>
   </body>
 </html>

@@ -393,3 +393,7 @@ input {
   display: none;
   /* ändra till block för att se hela tiden */
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
