@@ -24,7 +24,7 @@
   </head>
   <body>
     <div class="background">
-      <p class="shopping-cart-icon" id="open-cart"> &#128220;</p>
+      <p class="shopping-cart-icon cursor-pointer" id="open-cart"> &#128220;</p>
       <div class="cart-wrapper">
         
         <div class="cart-container hide" id="cart">
@@ -52,7 +52,7 @@
                 <!--parent över buttons och antal buttons-->
                 <span class="cart-product-name">product name</span>
                 <span class="cart-product-price"></span>
-                <button class="cart-delete-btn"> X </button>
+                <button class="cart-delete-btn cursor-pointer"> X </button>
               </li>
             </ul>
             <br />
@@ -66,11 +66,11 @@
             >
             <input type="number" placeholder="Ex: 2,4,5" />
             <div>
-              <button class="pay-btn">Pay to order</button>
+              <button class="pay-btn cursor-pointer">Pay to order</button>
               <div class="thanks-pop-up">
                 <h4 class="thanks-pop-up-title">Thank you for your order!</h4>
                 <p class="thanks-pop-up-msg">-Your order has gone through-</p>
-                <button class="thanks-pop-up-btn">X</button>
+                <button class="thanks-pop-up-btn cursor-pointer">X</button>
               </div>
             </div>
           </div>
@@ -117,14 +117,14 @@
       <!-- Navigering mellan kategorier i menyn -->
       <nav class="menu-nav">
         <ul class="menu-list">
-          <li class="menu-category" onclick="scrollToBeverage()">Beverages</li>
-          <li class="menu-category" onclick="scrollToAppetizers()">
+          <li class="menu-category cursor-pointer" onclick="scrollToBeverage()">Beverages</li>
+          <li class="menu-category cursor-pointer" onclick="scrollToAppetizers()">
             Appetizers
           </li>
-          <li class="menu-category" onclick="scrollToMainCourse()">
+          <li class="menu-category cursor-pointer" onclick="scrollToMainCourse()">
             Main Courses
           </li>
-          <li class="menu-category" onclick="scrollToDesserts()">Desserts</li>
+          <li class="menu-category cursor-pointer" onclick="scrollToDesserts()">Desserts</li>
         </ul>
       </nav>
       <section class="beverage-section">

@@ -337,3 +337,7 @@ input {
   border: none;
   background-color: #967b58;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
