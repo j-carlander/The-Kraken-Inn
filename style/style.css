@@ -43,6 +43,10 @@
   font-family: "Love Ya Like A Sister", cursive;
 }
 
+.locale-heading {
+  text-align: center;
+}
+
 .locale-btn-group {
   display: flex;
   justify-content: space-evenly;
