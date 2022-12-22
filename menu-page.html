@@ -67,10 +67,17 @@
             <input type="number" placeholder="Ex: 2,4,5" />
             <div>
               <button class="pay-btn">Pay to order</button>
-              <div class="thanks-pop-up">
+              <div class="confirm-pop-up hide">
+                <p class="confirm-pop-up-msg">-Confirm your order-</p>
+                <div class="confirm-btns-container">
+                  <button class="confirm-pop-up-yes-btn">Yes</button>
+                  <button class="confirm-pop-up-no-btn">No</button>
+                </div>
+              </div>
+              <div class="thanks-pop-up hide">
+                <button class="thanks-pop-up-btn">X</button>
                 <h4 class="thanks-pop-up-title">Thank you for your order!</h4>
                 <p class="thanks-pop-up-msg">-Your order has gone through-</p>
-                <button class="thanks-pop-up-btn">X</button>
               </div>
             </div>
           </div>

@@ -190,11 +190,6 @@ li {
   text-align: center;
 }
 
-.hide {
-  display: none;
-  /* ändra till block för att se hela tiden */
-}
-
 .cart-wrapper {
   position: sticky;
   top: 60px;
@@ -324,16 +319,77 @@ input {
 }
 
 .thanks-pop-up {
+  position: absolute;
+  top: 100px;
+  left: 60px;
   display: flex;
   flex-direction: column;
   width: 250px;
-  height: 100px;
+  height: 80px;
   background-color: #967b58;
   border: 1px dotted #d5b78b;
+  text-align: center;
 }
 
 .thanks-pop-up-btn {
   width: 8%;
   border: none;
   background-color: #967b58;
+  align-self: flex-end;
+  margin-top: 0.5em;
+}
+
+.confirm-pop-up {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 80px;
+  background-color: #967b58;
+  border: 1px dotted #d5b78b;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.confirm-btns-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.confirm-pop-up-yes-btn {
+  margin-right: 0.5em;
+}
+
+.confirm-pop-up-no-btn {
+  margin-left: 0.5em;
+}
+
+.confirm-pop-up-yes-btn,
+.confirm-pop-up-no-btn {
+  width: 25%;
+  border: 5px outset #b88e57;
+  background-color: #d5b78b;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 0.8em;
+}
+
+.confirm-pop-up-yes-btn:hover,
+.confirm-pop-up-no-btn:hover {
+  background-color: #f8d5a1;
+}
+.confirm-pop-up-yes-btn:active,
+.confirm-pop-up-no-btn:active {
+  border: 5px inset #b88e57;
+  background-color: #d5b78b;
+}
+
+.hide {
+  display: none;
+  /* ändra till block för att se hela tiden */
 }

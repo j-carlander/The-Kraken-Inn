@@ -6,6 +6,6 @@ describe("test of cart total", function () {
       { title: "coffee", quantity: 1, price: 30 },
     ];
 
-    expect(calculateCartTotal(list)).toBe(60);
+    expect(calculateCartTotal(list)).toBe((60).toFixed(2));
   });
 });

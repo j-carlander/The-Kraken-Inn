@@ -6,6 +6,11 @@ let shoppingCart = document.querySelector(".shopping-cart");
 let plusBtn = document.querySelector(".cart-plus-btn");
 
 const payBtn = document.querySelector(".pay-btn");
+const thanksPopUp = document.querySelector('.thanks-pop-up');
+const thanksPopUpBtn = document.querySelector('.thanks-pop-up-btn');
+const confirmPopUp = document.querySelector('.confirm-pop-up');
+const confirmPopUpBtnYes = document.querySelector('.confirm-pop-up-yes-btn');
+const confirmPopUpBtnNo = document.querySelector('.confirm-pop-up-no-btn');
 // addToCheckoutBtn.addEventListener('click', addToCheckoutClicked)
 // function addToCheckoutClicked(event){
 //     console.log("clicked")
@@ -24,8 +29,21 @@ const payBtn = document.querySelector(".pay-btn");
 // let productToCart = document.q
 
 payBtn.addEventListener("click", () => {
-  alert("Thank you for your order!");
+  confirmPopUp.classList.remove('hide');
 });
+
+thanksPopUpBtn.addEventListener('click', () => {
+  thanksPopUp.classList.add('hide');
+  confirmPopUp.classList.add('hide');
+})
+
+confirmPopUpBtnYes.addEventListener('click', () => {
+  thanksPopUp.classList.remove('hide');
+})
+
+confirmPopUpBtnNo.addEventListener('click', () => {
+  confirmPopUp.classList.add('hide');
+})
 
 function findIndexOf(article) {
   return shoppingList.findIndex((item) => item.title == article.title); // returns the index of article or -1 if not found
@@ -176,7 +194,7 @@ function updateCartTotal() {
     let quantityElement =
       titleShoppingcart.getElementsByClassName("cart-quantity")[0];
 
-    let price = parseFloat(priceElement.innerText.replace("€", "")); //parseFloat, converts all strings till tal med decimaler
+    let price = parseFloat(priceElement.innerText.replace("€", "")); //parseFloat, converts all strings to decimal numbers
     let quantity = quantityElement.value; //fungerar bara med input-funktionen!
     totalPrice = tital + price * quantity; //för att se!
   }
