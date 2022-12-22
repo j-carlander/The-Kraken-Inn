@@ -6,26 +6,29 @@ let shoppingCart = document.querySelector(".shopping-cart");
 let plusBtn = document.querySelector(".cart-plus-btn");
 
 const payBtn = document.querySelector(".pay-btn");
-// addToCheckoutBtn.addEventListener('click', addToCheckoutClicked)
-// function addToCheckoutClicked(event){
-//     console.log("clicked")
-//     let button = event.target; // refererar till det klickade elementet (behövs den ?)
-//     let foodName = foodItems[0].name; // ska det stå [i] för varje i värde eller [0] ??
-//     let foodPrice = foodItems[0].price;
-//     let foodimgSrc = foodItems[0].src; // ska vi ha img eller inte ?
-//     allProducts(foodName, foodPrice, foodimgSrc); // skicka vidare den infon vi behöver (namn, pris, img) till nästa funktion
-//     updateTotalAmount(); // skicka vidare till en funktion som uppdaterar totalsumman
-// }
-// function allProducts(foodName, foodPrice, foodimgSrc){
-//     // let checkout = foodName.foodPrice;
-//     // let item = checkout.foodimgSrc;
-//     // item.append(allProducts);
-// }
-// let productToCart = document.q
+const thanksPopUp = document.querySelector('.thanks-pop-up');
+const thanksPopUpBtn = document.querySelector('.thanks-pop-up-btn');
+const confirmPopUp = document.querySelector('.confirm-pop-up');
+const confirmPopUpBtnYes = document.querySelector('.confirm-pop-up-yes-btn');
+const confirmPopUpBtnNo = document.querySelector('.confirm-pop-up-no-btn');
+
 
 payBtn.addEventListener("click", () => {
-  alert("Thank you for your order!");
+  confirmPopUp.classList.remove('hide');
 });
+
+thanksPopUpBtn.addEventListener('click', () => {
+  thanksPopUp.classList.add('hide');
+  confirmPopUp.classList.add('hide');
+})
+
+confirmPopUpBtnYes.addEventListener('click', () => {
+  thanksPopUp.classList.remove('hide');
+})
+
+confirmPopUpBtnNo.addEventListener('click', () => {
+  confirmPopUp.classList.add('hide');
+})
 
 function findIndexOf(article) {
   return shoppingList.findIndex((item) => item.title == article.title); // returns the index of article or -1 if not found
@@ -112,18 +115,7 @@ function subtrFromCart(e) {
 
   removeFromShoppingList(article, foundIndex);
 }
-// for (let index = 0; index < productQty.length; index++) {
-//     const element = productQty[index];
 
-// }
-
-// }
-//SKA DETTA VARA MED?? TIPS FRÅN YOUTUBE
-// if (document.readyState == "loading") { //om sidan laddar kör den
-//     document.addEventListener("DOMContentLoaded", ready)
-// } else { //om den inte laddar eller redan laddat
-//     ready()
-// }
 
 function addTotalToCart(shoppingList) {
   let totalPrice = document.querySelector(".total-price");
@@ -176,7 +168,7 @@ function updateCartTotal() {
     let quantityElement =
       titleShoppingcart.getElementsByClassName("cart-quantity")[0];
 
-    let price = parseFloat(priceElement.innerText.replace("€", "")); //parseFloat, converts all strings till tal med decimaler
+    let price = parseFloat(priceElement.innerText.replace("€", "")); //parseFloat, converts all strings to decimal numbers
     let quantity = quantityElement.value; //fungerar bara med input-funktionen!
     totalPrice = tital + price * quantity; //för att se!
   }

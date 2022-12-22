@@ -162,7 +162,7 @@ const foodItems = {
       id: "brooklyn-blackout-cookie-brownie-combo-pack-2-tins",
       img: "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/123456/brooklyn-blackout-cookie-brownie-combo-pack-2-tins.d8805325baf6b23b4f01d119dc4531a7.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
       name: "Brooklyn Blackout Company",
-      dsc: "Brooklyn Blackout Cookie + Brownie Combo Pack - 2 Tins",
+      dsc: "Cookie + Brownie Combo Pack - 2 Tins",
       price: 8.9,
       rate: 5,
       country: "Brooklyn, NY",

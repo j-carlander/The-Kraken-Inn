@@ -25,9 +25,9 @@ function createCard(imgSrc, name, descr, price) {
   productPrice.classList.add("product-price");
 
   addToCartBtns.classList.add("add-to-cart-btns");
-  subtrQtyBtn.classList.add("subtr-qty-btn");
+  subtrQtyBtn.classList.add("subtr-qty-btn", "cursor-pointer");
   productQtyDisp.classList.add("product-qty-disp");
-  addQtyBtn.classList.add("add-qty-btn");
+  addQtyBtn.classList.add("add-qty-btn", "cursor-pointer");
 
   // Add inner text and source attribute
   productImg.setAttribute("src", imgSrc);
@@ -61,14 +61,12 @@ function createCard(imgSrc, name, descr, price) {
 
   addToCartBtns.append(subtrQtyBtn, productQtyDisp, addQtyBtn);
 
-
   productInfo.append(
     productName,
     productDescription,
     productPrice,
     addToCartBtns
   );
-
 
   productCard.append(imgContainer, productInfo);
 
@@ -77,7 +75,6 @@ function createCard(imgSrc, name, descr, price) {
 
 function renderCards() {
   for (const key in foodItems) {
-    
     let container = document.getElementById(`${key}`);
 
     for (const item in foodItems[key]) {
@@ -94,10 +91,9 @@ function renderCards() {
 }
 
 function renderFeaturedCards() {
-  const featuredBeverage = document.getElementById('featuredBeverage');
-  const featuredMainCourse= document.getElementById('featuredMainCourse');
-  const featuredDessert = document.getElementById('featuredDessert');
-  
+  const featuredBeverage = document.getElementById("featuredBeverage");
+  const featuredMainCourse = document.getElementById("featuredMainCourse");
+  const featuredDessert = document.getElementById("featuredDessert");
 
   let bevItem = Math.floor(Math.random() * 3);
   let mainItem = Math.floor(Math.random() * 10);
@@ -133,5 +129,3 @@ function renderFeaturedCards() {
 
 renderFeaturedCards();
 renderCards();
-
-
