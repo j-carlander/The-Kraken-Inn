@@ -5,7 +5,7 @@ describe("test of cart total", function () {
       { title: "cola", quantity: 2, price: 20 },
       { title: "coffee", quantity: 1, price: 30 },
     ];
-
-    expect(calculateCartTotal(list)).toBe(60);
+    let total = (60).toFixed(2); // 2 decimals
+    expect(calculateCartTotal(list)).toBe(total);
   });
 });
