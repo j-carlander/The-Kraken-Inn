@@ -148,12 +148,6 @@
   /* width: 100%; */
 }
 
-/* .add-to-cart-btns form {
- 
-  place-self: center; 
-   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-}*/
 .subtr-qty-btn,
 .add-qty-btn,
 .product-qty-disp {
@@ -162,24 +156,16 @@
   padding: 0.5em;
 }
 
-/* skapa mobilanpassad, lägg in måtten */
-/* (Jonathan): Utgår från "mobile first".*/
-/* @media only screen {
-    
-} */
 /* --------------- Menu page / checkout ------------- */
 
 body,
 html {
   font-family: "Love Ya Like A Sister", cursive;
   background-image: url(../images/pirateShip.png);
-  background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: #b89a72;
 }
-/* .background {
-  padding: 0.5em; 
-} */
 
 li {
   list-style-type: none;
@@ -216,6 +202,7 @@ li {
   position: sticky;
   top: 0;
   transform: scale(-1);
+  z-index: 10;
 }
 .menu-nav {
   background-color: #b89a72;
@@ -305,6 +292,7 @@ h3 {
 }
 input {
   padding: 0.2em 0.3em;
+  width: 10ch;
 }
 .order-now-btn,
 .order-more-btn,

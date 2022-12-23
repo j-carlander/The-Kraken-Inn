@@ -80,86 +80,85 @@
             </div>
           </div>
         </div>
-
-        <nav class="floating-navbar">
-          <ul class="nav-list">
-            <li class="nav-list-item">
-              <a href="index.html">Home</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="menu-page.html">See Menu</a>
-            </li>
-            <!-- <li class="nav-list-item">
+      </div>
+      <nav class="floating-navbar">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="menu-page.html">See Menu</a>
+          </li>
+          <!-- <li class="nav-list-item">
             <a href="#">Your Cart	
               &#128722;</a>
           </li> -->
-            <li class="nav-list-item">
-              <a href="#">About us</a>
+          <li class="nav-list-item">
+            <a href="#">About us</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="todays-offers-container">
+        <h2>Today's special</h2>
+        <article class="todays-offer">
+          <div class="featured-beverage" id="featuredBeverage">Beverages</div>
+          <div class="featured-main-course" id="featuredMainCourse">
+            Main course
+          </div>
+          <div class="featured-dessert" id="featuredDessert">Dessert</div>
+        </article>
+      </div>
+
+      <!-- special section -->
+      <article class="menu-section">
+        <!-- Navigering mellan kategorier i menyn -->
+        <nav class="menu-nav">
+          <ul class="menu-list">
+            <li
+              class="menu-category cursor-pointer"
+              onclick="scrollToBeverage()">
+              Beverages
             </li>
-            <li class="nav-list-item">
-              <a href="#">Contact</a>
+            <li
+              class="menu-category cursor-pointer"
+              onclick="scrollToAppetizers()">
+              Appetizers
+            </li>
+            <li
+              class="menu-category cursor-pointer"
+              onclick="scrollToMainCourse()">
+              Main Courses
+            </li>
+            <li
+              class="menu-category cursor-pointer"
+              onclick="scrollToDesserts()">
+              Desserts
             </li>
           </ul>
         </nav>
-        <div class="todays-offers-container">
-          <h2>Today's special</h2>
-          <article class="todays-offer">
-            <div class="featured-beverage" id="featuredBeverage">Beverages</div>
-            <div class="featured-main-course" id="featuredMainCourse">
-              Main course
-            </div>
-            <div class="featured-dessert" id="featuredDessert">Dessert</div>
-          </article>
-        </div>
+        <section class="beverage-section">
+          <h3>Beverages</h3>
+          <div class="menu-container" id="Beverages"></div>
+        </section>
 
-        <!-- special section -->
-        <article class="menu-section">
-          <!-- Navigering mellan kategorier i menyn -->
-          <nav class="menu-nav">
-            <ul class="menu-list">
-              <li
-                class="menu-category cursor-pointer"
-                onclick="scrollToBeverage()">
-                Beverages
-              </li>
-              <li
-                class="menu-category cursor-pointer"
-                onclick="scrollToAppetizers()">
-                Appetizers
-              </li>
-              <li
-                class="menu-category cursor-pointer"
-                onclick="scrollToMainCourse()">
-                Main Courses
-              </li>
-              <li
-                class="menu-category cursor-pointer"
-                onclick="scrollToDesserts()">
-                Desserts
-              </li>
-            </ul>
-          </nav>
-          <section class="beverage-section">
-            <h3>Beverages</h3>
-            <div class="menu-container" id="Beverages"></div>
-          </section>
+        <section class="appetizer-section">
+          <h3>Appetizers</h3>
+          <div class="menu-container" id="Appetizer"></div>
+        </section>
 
-          <section class="appetizer-section">
-            <h3>Appetizers</h3>
-            <div class="menu-container" id="Appetizer"></div>
-          </section>
+        <section class="main-course-section">
+          <h3>Main Course</h3>
+          <div class="menu-container" id="mainCourse"></div>
+        </section>
 
-          <section class="main-course-section">
-            <h3>Main Course</h3>
-            <div class="menu-container" id="mainCourse"></div>
-          </section>
-
-          <section class="dessert-section">
-            <h3>Dessert</h3>
-            <div class="menu-container" id="Desserts"></div>
-          </section>
-        </article>
-      </div>
+        <section class="dessert-section">
+          <h3>Dessert</h3>
+          <div class="menu-container" id="Desserts"></div>
+        </section>
+      </article>
     </div>
   </body>
 </html>

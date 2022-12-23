@@ -1,13 +1,13 @@
-
-
 // checkout-page
 
+// DOM variables
 const beverageSection = document.querySelector(".beverage-section");
 const appetizerSection = document.querySelector(".appetizer-section");
 const mainCourseSection = document.querySelector(".main-course-section");
 const dessertSection = document.querySelector(".dessert-section");
 const menuCategory = document.querySelectorAll(".menu-category");
 
+// functions to scroll to each section of the menu
 function scrollToBeverage() {
   beverageSection.scrollIntoView({
     behavior: "smooth",

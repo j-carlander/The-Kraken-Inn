@@ -1,39 +1,46 @@
+// The array for storing items customer choose from the menu
 let shoppingList = [];
 
 // checkout-page
 let shoppingCart = document.querySelector(".shopping-cart");
 // let addToCheckoutBtn = document.querySelector(".add-qty-btn");
 let plusBtn = document.querySelector(".cart-plus-btn");
+// DOM variables
+const openCartBtn = document.getElementById("open-cart");
+const cartContainer = document.getElementById("cart");
+const shoppingCartList = document.querySelector(".shopping-cart-list");
 
 const payBtn = document.querySelector(".pay-btn");
-const thanksPopUp = document.querySelector('.thanks-pop-up');
-const thanksPopUpBtn = document.querySelector('.thanks-pop-up-btn');
-const confirmPopUp = document.querySelector('.confirm-pop-up');
-const confirmPopUpBtnYes = document.querySelector('.confirm-pop-up-yes-btn');
-const confirmPopUpBtnNo = document.querySelector('.confirm-pop-up-no-btn');
+const thanksPopUp = document.querySelector(".thanks-pop-up");
+const thanksPopUpBtn = document.querySelector(".thanks-pop-up-btn");
+const confirmPopUp = document.querySelector(".confirm-pop-up");
+const confirmPopUpBtnYes = document.querySelector(".confirm-pop-up-yes-btn");
+const confirmPopUpBtnNo = document.querySelector(".confirm-pop-up-no-btn");
 
-
+// Eventlisteners for displaying pop up messages at checkout
 payBtn.addEventListener("click", () => {
-  confirmPopUp.classList.remove('hide');
+  confirmPopUp.classList.remove("hide");
 });
 
-thanksPopUpBtn.addEventListener('click', () => {
-  thanksPopUp.classList.add('hide');
-  confirmPopUp.classList.add('hide');
-})
+thanksPopUpBtn.addEventListener("click", () => {
+  thanksPopUp.classList.add("hide");
+  confirmPopUp.classList.add("hide");
+});
 
-confirmPopUpBtnYes.addEventListener('click', () => {
-  thanksPopUp.classList.remove('hide');
-})
+confirmPopUpBtnYes.addEventListener("click", () => {
+  thanksPopUp.classList.remove("hide");
+});
 
-confirmPopUpBtnNo.addEventListener('click', () => {
-  confirmPopUp.classList.add('hide');
-})
+confirmPopUpBtnNo.addEventListener("click", () => {
+  confirmPopUp.classList.add("hide");
+});
 
+// function to find the index of an article in the shopping list
 function findIndexOf(article) {
   return shoppingList.findIndex((item) => item.title == article.title); // returns the index of article or -1 if not found
 }
 
+// function that checks if an article allready exist in the shopping list and updates it's quantity and price, if it doesn't exist it adds the article to the list
 function pushToShoppingList(article, index) {
   if (index >= 0) {
     shoppingList[index].quantity = article.quantity;
@@ -43,6 +50,7 @@ function pushToShoppingList(article, index) {
   }
 }
 
+// function that updates the shopping list with reduced quantity and price of an article and if the quantyty becomes 0 removes it from the list
 function removeFromShoppingList(article, index) {
   if (index == -1) {
     return;
@@ -56,6 +64,7 @@ function removeFromShoppingList(article, index) {
   }
 }
 
+// function that takes in an event from a product card and a product qty and returns an object of that product
 function createCartArticleObject(e, productQty) {
   let productInfo = e.target.parentNode.parentNode;
   let productTitle = productInfo.querySelector(".product-title").innerText;
@@ -70,6 +79,7 @@ function createCartArticleObject(e, productQty) {
   return article;
 }
 
+// function that increase the shown product quantity
 function incrementProductQty(e) {
   let productQtyDis = e.target.previousElementSibling;
   let productQty = e.target.previousElementSibling.innerText;
@@ -81,6 +91,7 @@ function incrementProductQty(e) {
   return productQty;
 }
 
+// function that reduces the shown product quantity
 function decrementProductQty(e) {
   let productQtyDis = e.target.nextElementSibling;
   let productQty = e.target.nextElementSibling.innerText;
@@ -94,6 +105,7 @@ function decrementProductQty(e) {
   return productQty;
 }
 
+// function that handles what will happen when the '+' button is clicked on a product card
 function addToCart(e) {
   let productQty = incrementProductQty(e);
 
@@ -106,6 +118,7 @@ function addToCart(e) {
   //   console.log(`shoppinglist: ${shoppingList}`);
 }
 
+// function that handles what will happen when the '-' button is clicked on a product card
 function subtrFromCart(e) {
   let productQty = decrementProductQty(e);
 
@@ -116,12 +129,13 @@ function subtrFromCart(e) {
   removeFromShoppingList(article, foundIndex);
 }
 
-
+// function to add the calculatetd total of the cart to the right HTML element
 function addTotalToCart(shoppingList) {
   let totalPrice = document.querySelector(".total-price");
   totalPrice.innerText = calculateCartTotal(shoppingList);
 }
 
+// function to list all products from the array "shopping cart" to the html-list in the cart
 function listProductsInCart(shoppingList) {
   console.log();
   let cartProducts = "";
@@ -132,11 +146,12 @@ function listProductsInCart(shoppingList) {
     <span class="cart-product-price">${shoppingList[i].price}</span>
   </li>`;
   }
-  document.querySelector(".shopping-cart-list").innerHTML = cartProducts;
+  shoppingCartList.innerHTML = cartProducts;
 }
 
-document.getElementById("open-cart").addEventListener("click", function () {
-  document.getElementById("cart").classList.toggle("hide");
+// adding eventlistener to open the shopping cart and list the items in shopping list
+openCartBtn.addEventListener("click", function () {
+  cartContainer.classList.toggle("hide");
   listProductsInCart(shoppingList);
   addTotalToCart(shoppingList);
 });
