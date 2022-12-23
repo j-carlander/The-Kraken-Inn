@@ -24,6 +24,7 @@ thanksPopUpBtn.addEventListener('click', () => {
 
 confirmPopUpBtnYes.addEventListener('click', () => {
   thanksPopUp.classList.remove('hide');
+  emptyTabAfterConfirmedOrder();
 })
 
 confirmPopUpBtnNo.addEventListener('click', () => {
@@ -174,3 +175,16 @@ function updateCartTotal() {
   }
   document.getElementsByClassName("total-price")[0].innerText = total; //
 }
+
+function emptyTabAfterConfirmedOrder() {
+  shoppingList = [];
+  listProductsInCart(shoppingList);
+  addTotalToCart(shoppingList);
+
+  const emptyMenu = document.querySelectorAll('.product-qty-disp');
+
+  for(let item of emptyMenu) {
+    item.innerText = 0;
+  }
+}
+
