@@ -32,6 +32,7 @@ thanksPopUpBtn.addEventListener('click', () => {
 
 confirmPopUpBtnYes.addEventListener('click', () => {
   thanksPopUp.classList.remove('hide');
+  
   storePrevOrder();
   emptyTabAfterConfirmedOrder();
 })
@@ -41,6 +42,10 @@ confirmPopUpBtnNo.addEventListener('click', () => {
 })
 
 historyBtn.addEventListener("click", displayHistory);
+
+historyPopUpBtn.addEventListener('click', () => {
+  historyPopUp.classList.add('hide');
+})
 
 function findIndexOf(article) {
   return shoppingList.findIndex((item) => item.title == article.title); // returns the index of article or -1 if not found
@@ -193,6 +198,7 @@ function updateCartTotal() {
 function storePrevOrder() {
   const previousOrders = getFromLocalStorage();
   const mergeOrders = previousOrders.concat(shoppingList);
+
   localStorage.setItem('shoppingList', JSON.stringify(mergeOrders));
 }
 
@@ -200,19 +206,16 @@ function getFromLocalStorage(localStorageKey = "shoppingList") {
   return JSON.parse(localStorage.getItem(localStorageKey)) || [];
 }
 
-window.onload = function () {
-  const items = getFromLocalStorage();
-
-  items.forEach((item) => {
-   // do something with items.
-  });
-};
-
 function displayHistory() {
   historyPopUp.classList.remove('hide');
 
-}
+  const previousOrders = getFromLocalStorage();
 
+  const totalHistoryPrice = document.querySelector('.total-history-price')
+  totalHistoryPrice.innerText = 'Total: € ' + calculateCartTotal(previousOrders);
+  listProductsInCart(previousOrders, historyPopUpList);
+
+}
 
 
 function emptyTabAfterConfirmedOrder() {

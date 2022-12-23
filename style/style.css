@@ -310,8 +310,7 @@ input {
   content: "€ ";
 }
 
-.thanks-pop-up,
-.history-pop-up {
+.thanks-pop-up {
   position: absolute;
   top: 100px;
   left: 60px;
@@ -322,6 +321,23 @@ input {
   background-color: #967b58;
   border: 1px dotted #d5b78b;
   text-align: center;
+}
+
+.history-pop-up {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background-color: #967b58;
+  border: 1px dotted #d5b78b;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.total-history-price {
+  margin-top: 1em;
 }
 
 .thanks-pop-up-btn,
