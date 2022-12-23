@@ -73,6 +73,7 @@ function createCard(imgSrc, name, descr, price) {
   return productCard;
 }
 
+// function that appned productcards for all items in foodItems, placing them under each category
 function renderCards() {
   for (const key in foodItems) {
     let container = document.getElementById(`${key}`);
@@ -90,6 +91,7 @@ function renderCards() {
   }
 }
 
+// function that appends one productcard to each category in the Today's Special section
 function renderFeaturedCards() {
   const featuredBeverage = document.getElementById("featuredBeverage");
   const featuredMainCourse = document.getElementById("featuredMainCourse");
