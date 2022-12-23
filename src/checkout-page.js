@@ -8,44 +8,42 @@ let plusBtn = document.querySelector(".cart-plus-btn");
 const tabList = document.querySelector(".shopping-cart-list");
 
 const payBtn = document.querySelector(".pay-btn");
-const thanksPopUp = document.querySelector('.thanks-pop-up');
-const thanksPopUpBtn = document.querySelector('.thanks-pop-up-btn');
-const confirmPopUp = document.querySelector('.confirm-pop-up');
-const confirmPopUpBtnYes = document.querySelector('.confirm-pop-up-yes-btn');
-const confirmPopUpBtnNo = document.querySelector('.confirm-pop-up-no-btn');
+const thanksPopUp = document.querySelector(".thanks-pop-up");
+const thanksPopUpBtn = document.querySelector(".thanks-pop-up-btn");
+const confirmPopUp = document.querySelector(".confirm-pop-up");
+const confirmPopUpBtnYes = document.querySelector(".confirm-pop-up-yes-btn");
+const confirmPopUpBtnNo = document.querySelector(".confirm-pop-up-no-btn");
 
 const historyBtn = document.querySelector(".history-btn");
-const historyPopUp = document.querySelector('.history-pop-up');
-const historyPopUpList = document.querySelector('.history-pop-up-list');
-const historyPopUpBtn = document.querySelector('.history-pop-up-btn');
-
-
+const historyPopUp = document.querySelector(".history-pop-up");
+const historyPopUpList = document.querySelector(".history-pop-up-list");
+const historyPopUpBtn = document.querySelector(".history-pop-up-btn");
 
 payBtn.addEventListener("click", () => {
-  confirmPopUp.classList.remove('hide');
+  confirmPopUp.classList.remove("hide");
 });
 
-thanksPopUpBtn.addEventListener('click', () => {
-  thanksPopUp.classList.add('hide');
-  confirmPopUp.classList.add('hide');
-})
+thanksPopUpBtn.addEventListener("click", () => {
+  thanksPopUp.classList.add("hide");
+  confirmPopUp.classList.add("hide");
+});
 
-confirmPopUpBtnYes.addEventListener('click', () => {
-  thanksPopUp.classList.remove('hide');
-  
+confirmPopUpBtnYes.addEventListener("click", () => {
+  thanksPopUp.classList.remove("hide");
+
   storePrevOrder();
   emptyTabAfterConfirmedOrder();
-})
+});
 
-confirmPopUpBtnNo.addEventListener('click', () => {
-  confirmPopUp.classList.add('hide');
-})
+confirmPopUpBtnNo.addEventListener("click", () => {
+  confirmPopUp.classList.add("hide");
+});
 
 historyBtn.addEventListener("click", displayHistory);
 
-historyPopUpBtn.addEventListener('click', () => {
-  historyPopUp.classList.add('hide');
-})
+historyPopUpBtn.addEventListener("click", () => {
+  historyPopUp.classList.add("hide");
+});
 
 function findIndexOf(article) {
   return shoppingList.findIndex((item) => item.title == article.title); // returns the index of article or -1 if not found
@@ -133,7 +131,6 @@ function subtrFromCart(e) {
   removeFromShoppingList(article, foundIndex);
 }
 
-
 function addTotalToCart(shoppingList) {
   let totalPrice = document.querySelector(".total-price");
   totalPrice.innerText = calculateCartTotal(shoppingList);
@@ -192,43 +189,39 @@ function updateCartTotal() {
   document.getElementsByClassName("total-price")[0].innerText = total; //
 }
 
-
 //Adding history function to orders by saving to local
 //storage when pressing order button
-function storePrevOrder() {
-  const previousOrders = getFromLocalStorage();
-  const mergeOrders = previousOrders.concat(shoppingList);
 
-  localStorage.setItem('shoppingList', JSON.stringify(mergeOrders));
-}
+// function storePrevOrder() {
+//   const previousOrders = getFromLocalStorage();
+//   const mergeOrders = previousOrders.concat(shoppingList);
 
-function getFromLocalStorage(localStorageKey = "shoppingList") {
-  return JSON.parse(localStorage.getItem(localStorageKey)) || [];
-}
+//   localStorage.setItem('shoppingList', JSON.stringify(mergeOrders));
+// }
 
-function displayHistory() {
-  historyPopUp.classList.remove('hide');
+// function getFromLocalStorage(localStorageKey = "shoppingList") {
+//   return JSON.parse(localStorage.getItem(localStorageKey)) || [];
+// }
 
-  const previousOrders = getFromLocalStorage();
+// function displayHistory() {
+//   historyPopUp.classList.remove("hide");
 
-  const totalHistoryPrice = document.querySelector('.total-history-price')
-  totalHistoryPrice.innerText = 'Total: € ' + calculateCartTotal(previousOrders);
-  listProductsInCart(previousOrders, historyPopUpList);
+//   const previousOrders = getFromLocalStorage();
 
-}
-
+//   const totalHistoryPrice = document.querySelector(".total-history-price");
+//   totalHistoryPrice.innerText =
+//     "Total: € " + calculateCartTotal(previousOrders);
+//   listProductsInCart(previousOrders, historyPopUpList);
+// }
 
 function emptyTabAfterConfirmedOrder() {
   shoppingList = [];
   listProductsInCart(shoppingList, tabList);
   addTotalToCart(shoppingList);
 
-  const emptyMenu = document.querySelectorAll('.product-qty-disp');
+  const emptyMenu = document.querySelectorAll(".product-qty-disp");
 
-  for(let item of emptyMenu) {
+  for (let item of emptyMenu) {
     item.innerText = 0;
   }
 }
-
-
-
