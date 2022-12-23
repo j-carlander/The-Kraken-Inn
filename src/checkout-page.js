@@ -5,12 +5,20 @@ let shoppingCart = document.querySelector(".shopping-cart");
 // let addToCheckoutBtn = document.querySelector(".add-qty-btn");
 let plusBtn = document.querySelector(".cart-plus-btn");
 
+const tabList = document.querySelector(".shopping-cart-list");
+
 const payBtn = document.querySelector(".pay-btn");
 const thanksPopUp = document.querySelector('.thanks-pop-up');
 const thanksPopUpBtn = document.querySelector('.thanks-pop-up-btn');
 const confirmPopUp = document.querySelector('.confirm-pop-up');
 const confirmPopUpBtnYes = document.querySelector('.confirm-pop-up-yes-btn');
 const confirmPopUpBtnNo = document.querySelector('.confirm-pop-up-no-btn');
+
+const historyBtn = document.querySelector(".history-btn");
+const historyPopUp = document.querySelector('.history-pop-up');
+const historyPopUpList = document.querySelector('.history-pop-up-list');
+const historyPopUpBtn = document.querySelector('.history-pop-up-btn');
+
 
 
 payBtn.addEventListener("click", () => {
@@ -24,12 +32,15 @@ thanksPopUpBtn.addEventListener('click', () => {
 
 confirmPopUpBtnYes.addEventListener('click', () => {
   thanksPopUp.classList.remove('hide');
+  storePrevOrder();
   emptyTabAfterConfirmedOrder();
 })
 
 confirmPopUpBtnNo.addEventListener('click', () => {
   confirmPopUp.classList.add('hide');
 })
+
+historyBtn.addEventListener("click", displayHistory);
 
 function findIndexOf(article) {
   return shoppingList.findIndex((item) => item.title == article.title); // returns the index of article or -1 if not found
@@ -123,7 +134,7 @@ function addTotalToCart(shoppingList) {
   totalPrice.innerText = calculateCartTotal(shoppingList);
 }
 
-function listProductsInCart(shoppingList) {
+function listProductsInCart(shoppingList, container) {
   console.log();
   let cartProducts = "";
   for (let i = 0; i < shoppingList.length; i++) {
@@ -133,12 +144,12 @@ function listProductsInCart(shoppingList) {
     <span class="cart-product-price">${shoppingList[i].price}</span>
   </li>`;
   }
-  document.querySelector(".shopping-cart-list").innerHTML = cartProducts;
+  container.innerHTML = cartProducts;
 }
 
 document.getElementById("open-cart").addEventListener("click", function () {
   document.getElementById("cart").classList.toggle("hide");
-  listProductsInCart(shoppingList);
+  listProductsInCart(shoppingList, tabList);
   addTotalToCart(shoppingList);
 });
 
@@ -176,9 +187,37 @@ function updateCartTotal() {
   document.getElementsByClassName("total-price")[0].innerText = total; //
 }
 
+
+//Adding history function to orders by saving to local
+//storage when pressing order button
+function storePrevOrder() {
+  const previousOrders = getFromLocalStorage();
+  const mergeOrders = previousOrders.concat(shoppingList);
+  localStorage.setItem('shoppingList', JSON.stringify(mergeOrders));
+}
+
+function getFromLocalStorage(localStorageKey = "shoppingList") {
+  return JSON.parse(localStorage.getItem(localStorageKey)) || [];
+}
+
+window.onload = function () {
+  const items = getFromLocalStorage();
+
+  items.forEach((item) => {
+   // do something with items.
+  });
+};
+
+function displayHistory() {
+  historyPopUp.classList.remove('hide');
+
+}
+
+
+
 function emptyTabAfterConfirmedOrder() {
   shoppingList = [];
-  listProductsInCart(shoppingList);
+  listProductsInCart(shoppingList, tabList);
   addTotalToCart(shoppingList);
 
   const emptyMenu = document.querySelectorAll('.product-qty-disp');
@@ -187,4 +226,6 @@ function emptyTabAfterConfirmedOrder() {
     item.innerText = 0;
   }
 }
+
+
 
