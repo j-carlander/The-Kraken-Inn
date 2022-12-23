@@ -173,10 +173,12 @@ body,
 html {
   font-family: "Love Ya Like A Sister", cursive;
   background-image: url(../images/pirateShip.png);
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: #b89a72;
 }
+
 /* .background {
     position: relative;
   } */
